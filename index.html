@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,26 +9,30 @@
     <body>
         <header class="header">
             <div><img src="./Assets/Logo/Logo.png" alt="logo"></div>
+            <div class="config_container">
+                <div class="config">
+                    <button id="btn-language" class="circle-btn" title="Language">ES</button>
+                    <button class="circle-btn hidden" title="Theme"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
+                    <button class="hamburger-icon" id="hamburger-icon" title="Menu"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
         </header>
         <main class="main">
             <nav class="nav">                
                 <h1 class="nav_title font-effect-emboss">
                     Portafolio
                 </h1>
-                <ul class="nav_list">
-                    <li class="nav_list_option active font-effect-emboss"><a href=""><i class="fa-solid fa-house"></i> Inicio</a></li>
-                    <li class="nav_list_option"><a href=""><i class="fa-solid fa-list"></i> Habilidades</a></li>
-                    <li class="nav_list_option"><a href=""><i class="fa-solid fa-folder"></i> Proyectos</a></li>
-                    <li class="nav_list_option"><a href=""><i class="fa-solid fa-signs-post"></i>Trayectoria</a></li>
-                </ul>
-                <hr>
-                <div class="nav_btn_container">
-                    <a class="btn" href="">Contáctame</a>
-                </div>
+                <ul class="nav_list" id="nav_list">
+                    <li class="nav_list_option active font-effect-emboss"><a href="#home" title="Home"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li class="nav_list_option"><a href="#skills" title="Skills"><i class="fa-solid fa-list"></i> Habilidades</a></li>
+                    <li class="nav_list_option"><a href="#projects" title="Projects"><i class="fa-solid fa-folder"></i> Proyectos</a></li>
+                    <li class="nav_list_option"><a href="#career-path" title="Career Path"><i class="fa-solid fa-signs-post"></i> Trayectoria</a></li>
+                    <li class="nav_list_option"><a href="#contact" title="Contact"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+                </ul>                                
             </nav>
 
             <div class="sections_container">
-                <section id="home" class="home_container hidden">
+                <section id="home" class="home_container">
                     <div class="home_about">
                         <div class="home_about_title">                
                             <h1>Karen Rincón </h1>
@@ -83,12 +87,28 @@
                                     <i class="fa-brands fa-angular"></i>
                                     <p>Angular</p>
                                 </div>
+                                <div class="skill_card">
+                                    <i class="fa-brands fa-angular"></i>
+                                    <p>Bootstrap</p>
+                                </div>
+                                <div class="skill_card">
+                                    <i class="fa-brands fa-angular"></i>
+                                    <p>Typescript</p>
+                                </div>
                             </div>
                         </div>
                         <div>
                             <h2><i class="fa-solid fa-database"></i>Backend</h2>
                             <hr>
                             <div class="skills_container_section">
+                                <div class="skill_card">
+                                    <i class="fa-brands fa-angular"></i>
+                                    <p>Spring Boot</p>
+                                </div>
+                                <div class="skill_card">
+                                    <i class="fa-brands fa-angular"></i>
+                                    <p>FastApi</p>
+                                </div>
                                 <div class="skill_card">
                                     <i class="fa-brands fa-angular"></i>
                                     <p>MySQL</p>
@@ -106,6 +126,14 @@
                                 <div class="skill_card">
                                     <i class="fa-brands fa-java"></i>
                                     <p>Java</p>
+                                </div>
+                                <div class="skill_card">
+                                    <i class="fa-brands fa-java"></i>
+                                    <p>C#</p>
+                                </div>
+                                <div class="skill_card">
+                                    <i class="fa-brands fa-java"></i>
+                                    <p>Unity</p>
                                 </div>                           
                             </div>
                         </div>
@@ -114,54 +142,156 @@
                 <section id="projects" class="projects_container hidden">
                     <div>
                         <div class="section_title">
-                            <p>Selecciona el área</p>
                             <h1>Proyectos</h1>
+                            <p>Selecciona el área</p>
                         </div>
                         <div>
-                            <select name="area" id="area_selector">
+                            <select name="area" id="area_selector" class="projects_select">
                                 <option value="1">Desarrollo</option>
                                 <option value="2">Arte CG</option>
                             </select>
-                            <button>Ant</button>
-                            <button>Sig</button>
                         </div>
                     </div>
-                    <div>
-    
+                    <div class="projects_container_cards" id="projects_container_cards">
+                        <div class="projects_card">
+                            <div class="projects_card_img">
+                                <img src="Resources/3D Art/51, scene I.png" alt="">
+                            </div>
+                            <div class="projects_card_info">
+                                <h2>Título del proyecto</h2>
+                                <p>Esta es una descripción del proyecto</p> 
+                                <p class="projects_card_label">JavaScript</p>
+                                <a href="#modal-card-1"><i class="fa-solid fa-plus"></i> Más info</a>
+                            </div>
+                        </div>
+                        <div id="modal-card-1" class="modal-card_container">
+                            <div class="modal-card">
+                                <a href="#projects_container_cards" title="Close" class="close">X</a>
+                                <h1>Título del proyecto</h1>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nulla minima rerum libero provident. Sequi, corporis vel culpa repudiandae harum est ratione iusto maiores, ipsam tempora aspernatur explicabo, consequuntur delectus?</p>
+                                <div>etiquetas</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section id="contact" class="contact_container">
+                <section id="career-path" class="career-path_container hidden">
+                    <div class="section_title">
+                        <h1>Trayectoria</h1>
+                    </div>
+                    <div>
+                        <h2><i class="fa-solid fa-briefcase"></i> Experiencia Laboral</h2>
+                        <hr>
+                        <ol class="time_line">
+                            <li class="item_time_line">
+                                <div>
+                                    <div class="decorativeCircleList"></div>
+                                    <time datetime="2023-11">Noviembre 2023</time> - <time datetime="2024-05">Mayo 2024</time>
+                                    <h3>Practicante TI</h3>
+                                    <p>Brinsa SA</p>
+                                    <p>
+                                        Desarrollo de experiencia en RA mediante 8thWall.                           
+                                        Desarrollo de maquetaciones HTML y CSS.                                
+                                        Creación de tableros de visualización con Looker Studio.
+                                        Creación de contenido multimedia para capacitación de personal.
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>                            
+                    </div>
+                    <div>
+                        <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
+                        <hr>
+                        <ol class="time_line">
+                            <li class="item_time_line">
+                                <div>
+                                    <div class="decorativeCircleList"></div>
+                                    <time datetime="2024-09">Septiembre 2024</time>
+                                    <h3>Universidad Militar Nueva Granada</h3>
+                                    <p>Ingeniería en Multimedia</p>
+                                    <p>
+                                        Mérito académico: Cum Laude
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="item_time_line">
+                                <div>
+                                    <div class="decorativeCircleList"></div>
+                                    <time datetime="2018-12">Diciembre 2018</time>
+                                    <h3>Instituto Técnico Industrial</h3>
+                                    <p>Bachiller, Especialidad Electricidad y Electrónica</p>
+                                    <p>
+                                        Técnico en Bajas Tensiones
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>         
+                    </div>
+                    <div>
+                        <h2><i class="fa-solid fa-book"></i> Otros Cursos</h2>
+                        <hr>
+                        <ol class="time_line">
+                            <li class="item_time_line">
+                                <div>
+                                    <div class="decorativeCircleList"></div>
+                                    <time datetime="2024-09">Septiembre 2024</time>
+                                    <h3>Curso de Desarrollo web</h3>
+                                    <p>Udemy</p>
+                                    <p>
+                                        Temas: HTML, CSS, JS, Angular, Typescript
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="item_time_line">
+                                <div>
+                                    <div class="decorativeCircleList"></div>
+                                    <time datetime="2018-12">En curso</time>
+                                    <h3>Bootcamp Inteligencia Artificial</h3>
+                                    <p>TalentoTech</p>
+                                    <p>
+                                        Temas: Python, Numpy, Pandas, Búsquedas informadas y no informadas, Análisis de datos
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="item_time_line">
+                                <div>
+                                    <div class="decorativeCircleList"></div>
+                                    <time datetime="2018-12">En curso</time>
+                                    <h3>Certificación ONE - Oracle Next Education</h3>
+                                    <p>Oracle/Alura Latam</p>
+                                    <p>
+                                        Temas: HTML, CSS, JS, Java, Spring Boot
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>         
+                    </div>
+                </section>
+                <section id="contact" class="contact_container hidden">
                     <div>
                         <div class="section_title">
-                            <h1>Envíame un mensaje!</h1>
+                            <h1>¡Envíame un mensaje!</h1>
                             <p>Si tienes alguna pregunta o propuesta, o simplemente quieres decir hola.</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="contact_form_container">
                         <form id="form-contact" class="form" action="https://formspree.io/f/xnqernvr" method="POST">
                             <div class="form-questions-container">
                                 <input class="input-form" name="name" type="text" placeholder="Your name" maxlength="50" required>
                                 <input class="input-form" name="email" type="email" placeholder="Your email address" required>
-                                <textarea class="input-form" name="message" rows="5" placeholder="Your message"></textarea>
+                                <textarea class="text-form" name="message" rows="5" placeholder="Your message"></textarea>
                             </div>
-                                <button type="submit" class="btn-green">¡Enviar!</button>
+                                <button type="submit" class="btn-submit">¡Enviar!</button>
                         </form>
+                        <div class="contact_form_img">
+                            <img src="https://png.pngtree.com/png-clipart/20230913/original/pngtree-person-with-magnifying-glass-vector-png-image_11053799.png" alt="Personaje con lupa">
+                        </div>
                     </div>
                 </section>
-            </div>
-
-            <div class="config_container">
-                <div class="config">
-                    <button><i class="fa-solid fa-gear"></i></button>
-                    <button><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
-                </div>
-                <div class="hidden">
-
-                </div>
-            </div>
+            </div>            
         </main>
         
 
         <script src="https://kit.fontawesome.com/83090b1ff8.js" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
     </body>
 </html>
