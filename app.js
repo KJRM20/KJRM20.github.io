@@ -1,4 +1,7 @@
-// Control del menú de navegación
+/***********************************/
+// Control del menú de navegación //
+/*********************************/
+
 document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll('.nav_list_option a');
     const sections = document.querySelectorAll('.sections_container > section');
@@ -30,8 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/*****************************/
+// Configuración del idioma //
+/***************************/
 
-// Configuración del idioma
 const langButton = document.getElementById('btn-language');
 let currentLang = 'es'; // Idioma predeterminado
 
@@ -68,7 +73,7 @@ function applyTranslations(translations) {
   document.querySelector('.projects_container .section_title p').textContent = translations.projects.selectArea;
   document.querySelector('#area_selector option[value="1"]').textContent = translations.projects.areas.development;
   document.querySelector('#area_selector option[value="2"]').textContent = translations.projects.areas.cgArt;
-  document.querySelector('.projects_card_info p').textContent = translations.projects.projectDescription;
+  //document.querySelector('.projects_card_info p').textContent = translations.projects.projectDescription;
 
   // Sección Trayectoria (Career)
   document.querySelector('.career-path_container .section_title h1').textContent = translations.career.title;
@@ -87,7 +92,6 @@ function applyTranslations(translations) {
   document.querySelector('button[type="submit"]').textContent = translations.form.submit;
 }
 
-// Cambiar el idioma cuando se presiona el botón
 langButton.addEventListener('click', async () => {
   currentLang = currentLang === 'es' ? 'en' : 'es';
   langButton.textContent = currentLang.toUpperCase();
@@ -103,67 +107,94 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 
-// Menú de navegación
+/***********************/
+// Menú de navegación //
+/*********************/
+
 document.addEventListener("DOMContentLoaded", function() {
     const hamburgerIcon = document.getElementById('hamburger-icon');
     const nav = document.querySelector('.nav');
-    const navLinks = document.querySelectorAll('.nav_list_option a'); // Obtener todos los enlaces del menú
-    const closeModalButton = document.createElement('button'); // Botón de cerrar modal
+    const navLinks = document.querySelectorAll('.nav_list_option a'); 
+    const closeModalButton = document.createElement('button'); 
 
     // Crear botón de cerrar modal
     closeModalButton.classList.add('close-modal');
     closeModalButton.innerHTML = '<i class="fa-solid fa-times"></i>';
     document.body.appendChild(closeModalButton);
-    closeModalButton.style.display = 'none'; // Oculto inicialmente
+    closeModalButton.style.display = 'none';
 
-    // Mostrar el modal (menú) al hacer clic en el icono de hamburguesa
+    // Mostrar el menú al hacer clic en el icono de hamburguesa
     hamburgerIcon.addEventListener('click', function() {
         nav.classList.add('nav_visible');
-        hamburgerIcon.style.display = 'none'; // Ocultar botón de hamburguesa
-        closeModalButton.style.display = 'block'; // Mostrar botón de cerrar
+        hamburgerIcon.style.display = 'none';
+        closeModalButton.style.display = 'block';
     });
 
     // Función para mostrar el botón de hamburguesa solo en dispositivos móviles
     function showHamburgerIcon() {
         if (window.matchMedia("(max-width: 520px)").matches) {
-            hamburgerIcon.style.display = 'block'; // Mostrar botón de hamburguesa solo si está en móvil
+            hamburgerIcon.style.display = 'block';
         } else {
-            hamburgerIcon.style.display = 'none'; // Ocultar el botón en pantallas grandes
+            hamburgerIcon.style.display = 'none';
+            closeModalButton.style.display = 'none';
         }
     }
 
-    // Cerrar el modal al hacer clic en el botón de cerrar
+    // Cerrar el menú al hacer clic en el botón de cerrar
     closeModalButton.addEventListener('click', function() {
         nav.classList.remove('nav_visible');
-        closeModalButton.style.display = 'none'; // Ocultar botón de cerrar
-        showHamburgerIcon(); // Verificar si debe mostrar el botón de hamburguesa
+        closeModalButton.style.display = 'none';
+        showHamburgerIcon();
     });
 
-    // Cerrar el modal al hacer clic fuera del menú
+    // Cerrar el menú al hacer clic fuera 
     window.addEventListener('click', function(event) {
         if (event.target === nav) {
             nav.classList.remove('nav_visible');
-            closeModalButton.style.display = 'none'; // Ocultar botón de cerrar
-            showHamburgerIcon(); // Verificar si debe mostrar el botón de hamburguesa
+            closeModalButton.style.display = 'none';
+            showHamburgerIcon();
         }
     });
 
     // Cerrar el modal al hacer clic en una opción del menú
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            nav.classList.remove('nav_visible'); // Cerrar el modal
-            closeModalButton.style.display = 'none'; // Ocultar botón de cerrar
-            showHamburgerIcon(); // Verificar si debe mostrar el botón de hamburguesa
+            nav.classList.remove('nav_visible'); 
+            closeModalButton.style.display = 'none';
+            showHamburgerIcon(); 
         });
     });
 
     // Evento de cambio de tamaño de pantalla
     window.addEventListener('resize', function() {
-        showHamburgerIcon(); // Verificar si debe mostrar u ocultar el botón de hamburguesa en función del tamaño de la pantalla
+        showHamburgerIcon();
     });
-
-    // Inicializar el estado del botón de hamburguesa según el tamaño de la pantalla actual
+    
     showHamburgerIcon();
 });
 
 
+/*************************/
+//Contacto - formulario //
+/***********************/
+
+const form = document.querySelector('#form-contact')
+    form.addEventListener('submit', handleSubmit)
+
+async function handleSubmit(event){
+    event.preventDefault()
+    const _form = new FormData(this)
+    console.log(_form.get('name'))
+    const response = await fetch(this.action,{
+        method: this.method,
+        body: _form,
+        headers:{
+            'Accept': 'application/json'
+        }
+    })
+
+    if(response.ok){
+        this.reset()
+        alert('Thanks you for contacted me, I will write you soon!')
+    }
+}

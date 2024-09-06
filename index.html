@@ -52,13 +52,13 @@
                             </div>
                             <div class="home_about_social_email">
                                 <textarea readonly>karenrinconjm@outlook.com</textarea><br>
-                                <a href="mailto:karenrinconjm@outlook.com" class="circle-btn"><i class="fa-solid fa-paper-plane"></i></a>
-                                <button class="circle-btn"><i class="fa-solid fa-copy"></i></button>
+                                <a href="mailto:karenrinconjm@outlook.com" class="circle-btn" title="Enviar mail"><i class="fa-solid fa-paper-plane"></i></a>
+                                <button class="circle-btn" title="Copiar"><i class="fa-solid fa-copy"></i></button>
                             </div>
                         </div>                        
                     </div>
                     <div class="home_avatar">
-                        <canvas style="color: red;"></canvas>
+                        <img src="Assets/Icons/AvatarIcon.png" alt="Caricatura de Karen">
                     </div>
                 </section>
                 <section id="skills" class="skills_container hidden">
@@ -153,24 +153,95 @@
                         </div>
                     </div>
                     <div class="projects_container_cards" id="projects_container_cards">
-                        <div class="projects_card">
-                            <div class="projects_card_img">
-                                <img src="Resources/3D Art/51, scene I.png" alt="">
+                        <div class="projects_cards_development cards_container">
+
+                            <div class="projects_card">
+                                <div class="projects_card_img">
+                                    <img src="Assets/Projects/Wirid-1.png" alt="Captura de proyecto Wirid">
+                                </div>
+                                <div class="projects_card_info">
+                                    <h2>WiridLab Tour</h2>
+                                    <p>Recorrido virtual por un laboratorio con interacción en objetos 3D.</p> 
+                                    <div class="projects_card_labels_container">
+                                        <p class="projects_card_label">C#</p>
+                                        <p class="projects_card_label">Unity</p>
+                                        <p class="projects_card_label">Json</p>
+                                    </div>
+                                    <a href="#modal-card-1"><i class="fa-solid fa-plus"></i> Más info</a>
+                                </div>
                             </div>
-                            <div class="projects_card_info">
-                                <h2>Título del proyecto</h2>
-                                <p>Esta es una descripción del proyecto</p> 
-                                <p class="projects_card_label">JavaScript</p>
-                                <a href="#modal-card-1"><i class="fa-solid fa-plus"></i> Más info</a>
+                            <div id="modal-card-1" class="modal-card_container">
+                                <div class="modal-card">
+                                    <a href="#projects_container_cards" title="Close" class="close">X</a>
+                                    <h1>WiridLab Tour</h1>
+                                    <hr>
+                                    <p class="modal-card_container_text">Proyecto de seis meses que consistió en la creación de un recorrido virtual por un laboratorio de telecomunicaciones, con interacción en objetos 3D. Fui responsable de la codificación de la aplicación y de la dirección del equipo de desarrollo. El proyecto fue negociado directamente con el cliente y gestionado mediante la metodología Scrum, lo que permitió una entrega ágil y organizada a lo largo de todo el proceso.</p>
+                                    <p class="modal-card_container_text">Puedes probar el aplicativo presionando el botón rojo.</p>
+                                    <div class="projects_card_labels_container">
+                                        <p class="projects_card_label">C#</p>
+                                        <p class="projects_card_label">Unity</p>
+                                        <p class="projects_card_label">Json</p>
+                                        <p class="projects_card_label">WebGL</p>
+                                    </div>
+                                    <iframe frameborder="0" src="https://itch.io/embed/2036400?border_width=0&amp;bg_color=e1e1e1&amp;fg_color=1E3231&amp;link_color=e53b44" width="50%" height="165"><a href="https://kjrm20.itch.io/wiridlab-tour">WiridLab Tour by Karen Rincón</a></iframe>
+                                </div>
                             </div>
+
+                            <div class="projects_card">
+                                <div class="projects_card_img">
+                                    <img src="Assets/Projects/Encriptador.png" alt="Captura de proyecto Wirid">
+                                </div>
+                                <div class="projects_card_info">
+                                    <h2>Encriptador Web</h2>
+                                    <p>Página Web responsive, permite encriptar información basada en reglas.</p> 
+                                    <div class="projects_card_labels_container">
+                                        <p class="projects_card_label">HTML</p>
+                                        <p class="projects_card_label">CSS</p>
+                                        <p class="projects_card_label">JS</p>
+                                    </div>
+                                    <a href="#modal-card-2"><i class="fa-solid fa-plus"></i> Más info</a>
+                                </div>
+                            </div>
+                            <div id="modal-card-2" class="modal-card_container">
+                                <div class="modal-card">
+                                    <a href="#projects_container_cards" title="Close" class="close">X</a>
+                                    <h1>Encriptador Web</h1>
+                                    <hr>
+                                    <p class="modal-card_container_text">Proyecto de un mes, desarrollado como parte del primer challenge del Proyecto ONE de Oracle+Alura LATAM.
+                                        El reto consiste en crear una página web que permita a los usuarios encriptar y desencriptar texto de forma sencilla, demostrando la habilidad para construir una solución funcional y eficiente.</p>
+                                    <p class="modal-card_container_text">Puedes probar el aplicativo presionando el botón rojo.</p>
+                                    <div class="projects_card_labels_container">
+                                        <p class="projects_card_label">HTML</p>
+                                        <p class="projects_card_label">CSS</p>
+                                        <p class="projects_card_label">JS</p>
+                                    </div>
+                                    <a class="btn-rojo" href="https://kjrm20.github.io/Encriptador-Challenge/" target="_new">Entrar al sitio web</a>
+                                </div>
+                            </div>
+
                         </div>
-                        <div id="modal-card-1" class="modal-card_container">
-                            <div class="modal-card">
-                                <a href="#projects_container_cards" title="Close" class="close">X</a>
-                                <h1>Título del proyecto</h1>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nulla minima rerum libero provident. Sequi, corporis vel culpa repudiandae harum est ratione iusto maiores, ipsam tempora aspernatur explicabo, consequuntur delectus?</p>
-                                <div>etiquetas</div>
+                        <div class="projects_cards_art cards_container hidden">
+                            
+                            <div class="projects_card">
+                                <div class="projects_card_img">
+                                    <img src="Resources/3D Art/51, scene I.png" alt="">
+                                </div>
+                                <div class="projects_card_info">
+                                    <h2>Título del proyecto</h2>
+                                    <p>Esta es una descripción del proyecto</p> 
+                                    <p class="projects_card_label">JavaScript</p>
+                                    <a href="#modal-card-1"><i class="fa-solid fa-plus"></i> Más info</a>
+                                </div>
                             </div>
+                            <div id="modal-card-1" class="modal-card_container">
+                                <div class="modal-card">
+                                    <a href="#projects_container_cards" title="Close" class="close">X</a>
+                                    <h1>Título del proyecto</h1>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nulla minima rerum libero provident. Sequi, corporis vel culpa repudiandae harum est ratione iusto maiores, ipsam tempora aspernatur explicabo, consequuntur delectus?</p>
+                                    <div>etiquetas</div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </section>
@@ -283,7 +354,7 @@
                                 <button type="submit" class="btn-submit">¡Enviar!</button>
                         </form>
                         <div class="contact_form_img">
-                            <img src="https://png.pngtree.com/png-clipart/20230913/original/pngtree-person-with-magnifying-glass-vector-png-image_11053799.png" alt="Personaje con lupa">
+                            <img src="Assets/Icons/GatitoIcon.png" alt="Gatito observando el formulario">
                         </div>
                     </div>
                 </section>
