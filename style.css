@@ -451,13 +451,14 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
 	position: relative;
+    width: 60%;
+    max-height: 80%;
     padding: 40px;
 	border-radius: 13px;
 	background: var(--secondary-bg-color);
-    transition: opacity 400ms ease-in-out;
     box-shadow: 0 2px 3px #00000010;
+    transition: opacity 400ms ease-in-out;
 }
 
 .modal-card_container hr{
@@ -602,6 +603,7 @@ hr{
     padding: 6px 15px;
     color: var(--main-text-color);
     border: solid 1px var(--main-border-color);
+    font-family: sans-serif;
     border-radius: 10px;
     box-shadow: 0 2px 3px #00000015;
 }
@@ -612,8 +614,10 @@ hr{
     border: solid 1px var(--main-border-color);
     border-radius: 10px;
     box-shadow: 0 2px 3px #00000015;
+    font-family: sans-serif;
     resize: none;
     overflow: auto;
+
 }
 
 .btn-submit{
@@ -651,6 +655,7 @@ hr{
     height: 20%;    
     justify-content: center;
     align-items: center;
+    z-index: 10000;
 }
 
 .msj__popup_text{
@@ -703,13 +708,13 @@ hr{
     }
     15% {
         top:0;
-        transform: translateY(0) scale(1.1);
+        transform: translateY(50%) scale(1.1);
         opacity: 1;
     }
 
     85% {
         top:0;
-        transform: translateY(0) scale(1.1);
+        transform: translateY(50%) scale(1.1);
         opacity: 1;
     }
 
@@ -926,7 +931,6 @@ hr{
     }
     .modal-card_container > div {
         width: 80%;
-        max-height: 80%;
         padding: 20px 5px;
     }
     .career-path_container h2{

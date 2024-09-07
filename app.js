@@ -3,7 +3,8 @@
 /***************************/
 
 const langButton = document.getElementById('btn-language');
-let currentLang = 'es'; // Idioma predeterminado
+var userLang = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
+let currentLang = userLang.startsWith('es') ? 'es' : 'en';
 
 async function loadTranslations() {
   const response = await fetch('./translations.json');
@@ -197,7 +198,16 @@ async function handleSubmit(event){
 
     if(response.ok){
         this.reset()
-        alert('Thanks you for contacted me, I will write you soon!')
+        let mensaje = document.getElementById('popup');
+        if(langButton.textContent == "ES"){
+            mensaje.querySelector('p').innerHTML = "Gracias por ponerte en contacto conmigo, ¡te escribiré pronto!";
+        }else{
+            mensaje.querySelector('p').innerHTML = "Thanks you for contacted me, I will write you soon!";
+        }
+        mensaje.classList.remove('hidden');
+        setTimeout(()=>{
+            mensaje.classList.add('hidden');
+        },2500)
     }
 }
 
@@ -212,7 +222,11 @@ function copyEmail(){
     textarea.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(textarea.value).then(function() {
         let mensaje = document.getElementById('popup');
-        mensaje.querySelector('p').innerHTML = "El correo ha sido copiado al portapapeles."
+        if(langButton.textContent == "ES"){
+            mensaje.querySelector('p').innerHTML = "El correo ha sido copiado al portapapeles.";
+        }else{
+            mensaje.querySelector('p').innerHTML = "The e-mail has been copied to the clipboard.";
+        }
         mensaje.classList.remove('hidden');
         setTimeout(()=>{
             mensaje.classList.add('hidden');
