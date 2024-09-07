@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Autora: Karen Rincón, 2024, Portafolio.">
         <title>Karen Rincón</title>
         <link href="style.css" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="Assets/Logo/Favicon.ico">
@@ -20,11 +21,11 @@
         </header>
         <main class="main">
             <nav class="nav">                
-                <h1 class="nav_title font-effect-emboss">
+                <h1 class="nav_title">
                     Portafolio
                 </h1>
                 <ul class="nav_list" id="nav_list">
-                    <li class="nav_list_option active font-effect-emboss"><a href="#home" title="Home"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li class="nav_list_option active"><a href="#home" title="Home"><i class="fa-solid fa-house"></i> Inicio</a></li>
                     <li class="nav_list_option"><a href="#skills" title="Skills"><i class="fa-solid fa-list"></i> Habilidades</a></li>
                     <li class="nav_list_option"><a href="#projects" title="Projects"><i class="fa-solid fa-folder"></i> Proyectos</a></li>
                     <li class="nav_list_option"><a href="#career-path" title="Career Path"><i class="fa-solid fa-signs-post"></i> Trayectoria</a></li>
@@ -47,14 +48,14 @@
                         </div>
                         <div class="home_about_social">
                             <div class="home_about_social_media">
-                                <a href="https://www.linkedin.com/in/karen-rincon/" target="_new"> <i class="fa-brands fa-linkedin-in"></i></a>
-                                <a href="https://github.com/KJRM20" target="_new"> <i class="fa-brands fa-github"></i></a>
-                                <a href="https://www.behance.net/karenjrincon" target="_new"> <i class="fa-brands fa-behance"></i></a>
+                                <a href="https://www.linkedin.com/in/karen-rincon/" target="_new" aria-label="LinkedIn"> <i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://github.com/KJRM20" target="_new" aria-label="GitHub"> <i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.behance.net/karenjrincon" target="_new" aria-label="Behance"> <i class="fa-brands fa-behance"></i></a>
                             </div>
                             <div class="home_about_social_email">
-                                <textarea readonly>karenrinconjm@outlook.com</textarea><br>
+                                <textarea id="email-text" name="email" readonly>karenrinconjm@outlook.com</textarea><br>
                                 <a href="mailto:karenrinconjm@outlook.com" class="circle-btn" title="Enviar mail"><i class="fa-solid fa-paper-plane"></i></a>
-                                <button class="circle-btn" title="Copiar"><i class="fa-solid fa-copy"></i></button>
+                                <button class="circle-btn" title="Copiar" onclick="copyEmail()"><i class="fa-solid fa-copy"></i></button>
                             </div>
                         </div>                        
                     </div>
@@ -81,7 +82,15 @@
                                     <p>CSS3</p>
                                 </div>
                                 <div class="skill_card">
-                                    <i class="fa-brands fa-js"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 50 50">
+                                        <defs>
+                                            <linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+                                              <stop class="stop1" offset="0%" />
+                                              <stop class="stop2" offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path class="svg-fill" d="M45.274,2.325C45.084,2.118,44.817,2,44.536,2H5.464C5.183,2,4.916,2.118,4.726,2.325S4.443,2.81,4.468,3.089l3.52,39.427 c0.037,0.412,0.324,0.759,0.722,0.873l16.01,4.573C24.809,47.987,24.902,48,24.994,48s0.185-0.013,0.274-0.038l16.024-4.573 c0.398-0.114,0.685-0.461,0.722-0.873l3.518-39.427C45.557,2.81,45.463,2.532,45.274,2.325z M12,29.004l7,1.942V11h4v26l-11-3.051 V29.004z M38.054,22L37,34.25L27,37v-4.601l6.75-1.855l0.25-3.75L27,28V11h12l-0.345,4H31v8L38.054,22z"></path>
+                                    </svg>
                                     <p>JavaScript</p>
                                 </div>
                                 <div class="skill_card">
@@ -89,11 +98,19 @@
                                     <p>Angular</p>
                                 </div>
                                 <div class="skill_card">
-                                    <i class="fa-brands fa-angular"></i>
+                                    <i class="fa-brands fa-bootstrap"></i>
                                     <p>Bootstrap</p>
                                 </div>
                                 <div class="skill_card">
-                                    <i class="fa-brands fa-angular"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
+                                        <defs>
+                                            <linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+                                              <stop class="stop1" offset="0%" />
+                                              <stop class="stop2" offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path class="svg-fill" d="M45,4H5C4.447,4,4,4.448,4,5v40c0,0.552,0.447,1,1,1h40c0.553,0,1-0.448,1-1V5C46,4.448,45.553,4,45,4z M29,26.445h-5V42h-4	V26.445h-5V23h14V26.445z M30.121,41.112v-4.158c0,0,2.271,1.712,4.996,1.712c2.725,0,2.62-1.782,2.62-2.026	c0-2.586-7.721-2.586-7.721-8.315c0-7.791,11.25-4.717,11.25-4.717l-0.14,3.704c0,0-1.887-1.258-4.018-1.258s-2.9,1.013-2.9,2.096	c0,2.795,7.791,2.516,7.791,8.141C42,44.955,30.121,41.112,30.121,41.112z"></path>
+                                    </svg>
                                     <p>Typescript</p>
                                 </div>
                             </div>
@@ -103,15 +120,41 @@
                             <hr>
                             <div class="skills_container_section">
                                 <div class="skill_card">
-                                    <i class="fa-brands fa-angular"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                                        <defs>
+                                            <linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+                                              <stop class="stop1" offset="0%" />
+                                              <stop class="stop2" offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path class="svg-fill" d="M43.982,23.635c0.069-4.261-0.891-9.328-2.891-15.273l-1.568-4.662l-2.13,4.433 c-0.114,0.237-0.244,0.469-0.38,0.698C33.514,5.827,28.974,4,24,4C12.954,4,4,12.954,4,24c0,11.046,8.954,20,20,20s20-8.954,20-20 C44,23.877,43.984,23.758,43.982,23.635z"></path><path fill="#fff" d="M39.385 32.558c-3.123 4.302-8.651 4.533-13.854 4.442H18.75h-1.938c4.428-1.593 7.063-1.972 9.754-3.4 5.068-2.665 10.078-8.496 11.121-14.562-1.93 5.836-7.779 10.85-13.109 12.889-3.652 1.393-10.248 2.745-10.248 2.745l-.267-.145C9.573 32.268 9.437 22.214 17.6 18.968c3.574-1.423 6.993-.641 10.854-1.593 4.122-1.012 8.89-4.208 10.83-8.375C41.456 15.667 44.07 26.106 39.385 32.558L39.385 32.558zM15.668 38.445C15.386 38.795 14.955 39 14.505 39c-.823 0-1.495-.677-1.495-1.5s.677-1.5 1.495-1.5c.341 0 .677.118.941.336C16.086 36.855 16.186 37.805 15.668 38.445L15.668 38.445z"></path>
+                                    </svg>
                                     <p>Spring Boot</p>
                                 </div>
                                 <div class="skill_card">
-                                    <i class="fa-brands fa-angular"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" role="img">
+                                        <defs>
+                                            <linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+                                              <stop class="stop1" offset="0%" />
+                                              <stop class="stop2" offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path class="svg-fill" d="M12 0C5.375 0 0 5.375 0 12c0 6.627 5.375 12 12 12 6.626 0 12-5.373 12-12 0-6.625-5.373-12-12-12zm-.624 21.62v-7.528H7.19L13.203 2.38v7.528h4.029L11.376 21.62z"/>
+                                    </svg>
                                     <p>FastApi</p>
                                 </div>
                                 <div class="skill_card">
-                                    <i class="fa-brands fa-angular"></i>
+                                    <svg width="30" height="30" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>folder_type_mysql</title>
+                                        <defs>
+                                            <linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+                                              <stop class="stop1" offset="0%" />
+                                              <stop class="stop2" offset="100%" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path class="svg-fill" d="M27.917,6H18.143l-2,4H5V27H30V6ZM28,10H20.19l1.048-2H28Z"/>
+                                        <path d="M16.018,14.715a2.267,2.267,0,0,0-.591.072v.029h.028a4.784,4.784,0,0,0,.461.591c.116.231.217.46.332.691l.028-.029a.81.81,0,0,0,.3-.721,3.194,3.194,0,0,1-.173-.3c-.086-.144-.274-.216-.39-.331" style="fill:none;fill-rule:evenodd"/>
+                                        <path d="M30.328,27.286a6.676,6.676,0,0,0-2.8.4c-.216.086-.562.086-.591.36.116.115.13.3.232.462a3.376,3.376,0,0,0,.749.879c.3.231.605.46.923.662.562.347,1.2.548,1.743.894.318.2.634.461.953.678.158.115.258.3.46.374v-.044a2.918,2.918,0,0,0-.22-.462c-.144-.143-.288-.274-.433-.417a6.878,6.878,0,0,0-1.5-1.455c-.462-.318-1.471-.75-1.658-1.282l-.029-.029a5.843,5.843,0,0,0,1-.232c.489-.129.936-.1,1.441-.229.231-.058.649-.2.649-.2V27.42c-.258-.256-.442-.6-.713-.841a19.049,19.049,0,0,0-2.352-1.753c-.443-.285-1.013-.47-1.483-.713-.17-.086-.455-.128-.555-.271a5.714,5.714,0,0,1-.585-1.1c-.413-.783-.813-1.652-1.169-2.48a15.136,15.136,0,0,0-.727-1.625,14.371,14.371,0,0,0-5.517-5.331,6.818,6.818,0,0,0-1.824-.585c-.357-.015-.713-.043-1.069-.057a5.792,5.792,0,0,1-.656-.5c-.813-.513-2.907-1.625-3.506-.157-.385.927.57,1.839.9,2.31a6.683,6.683,0,0,1,.726,1.069c.1.242.128.5.229.756a17.035,17.035,0,0,0,.741,1.911,6.726,6.726,0,0,0,.527.883c.115.158.314.228.357.486a4.086,4.086,0,0,0-.328,1.069,6.276,6.276,0,0,0,.414,4.789c.228.356.77,1.141,1.5.841.641-.256.5-1.069.684-1.781.043-.172.014-.285.1-.4v.14s.364.8.544,1.209a8.152,8.152,0,0,0,1.8,1.951,2.634,2.634,0,0,1,.663.875v.258h.322a.8.8,0,0,0-.319-.593,7.1,7.1,0,0,1-.722-.874,18.765,18.765,0,0,1-1.555-2.651c-.223-.453-.417-.947-.6-1.4-.083-.174-.083-.437-.222-.524a5.458,5.458,0,0,0-.666.989,8.569,8.569,0,0,0-.389,2.2c-.055.015-.028,0-.055.029-.444-.116-.6-.6-.764-1a6.6,6.6,0,0,1-.125-3.89c.1-.3.515-1.267.347-1.558-.084-.278-.361-.437-.514-.656a5.881,5.881,0,0,1-.5-.932c-.333-.815-.5-1.719-.861-2.534a7.844,7.844,0,0,0-.694-1.122,7.236,7.236,0,0,1-.764-1.136.707.707,0,0,1-.056-.6.227.227,0,0,1,.2-.19c.18-.16.694.043.874.131a6.924,6.924,0,0,1,1.374.728c.2.146.652.516.652.516h.135c.461.1.981.028,1.413.158a9.189,9.189,0,0,1,2.075.994,12.786,12.786,0,0,1,4.5,4.93c.173.331.246.634.4.979.3.708.678,1.429.98,2.12a9.482,9.482,0,0,0,1.024,1.932c.216.3,1.081.461,1.47.62a10.54,10.54,0,0,1,1,.4c.49.3.979.649,1.441.981.23.173.951.533.994.822" style="fill:#f3fdff;fill-rule:evenodd"/>
+                                    </svg>
                                     <p>MySQL</p>
                                 </div>
                             </div>
@@ -129,11 +172,19 @@
                                     <p>Java</p>
                                 </div>
                                 <div class="skill_card">
-                                    <i class="fa-brands fa-java"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
+                                        <defs>
+                                          <linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
+                                            <stop class="stop1" offset="0%" />
+                                            <stop class="stop2" offset="100%" />
+                                          </linearGradient>
+                                        </defs>
+                                        <path class="svg-fill" d="M 25 2 C 24.285156 2 23.570313 2.179688 22.933594 2.539063 L 6.089844 12.003906 C 4.800781 12.726563 4 14.082031 4 15.535156 L 4 34.464844 C 4 35.917969 4.800781 37.273438 6.089844 37.996094 L 22.933594 47.460938 C 23.570313 47.820313 24.285156 48 25 48 C 25.714844 48 26.429688 47.820313 27.066406 47.460938 L 43.910156 38 C 45.199219 37.273438 46 35.917969 46 34.464844 L 46 15.535156 C 46 14.082031 45.199219 12.726563 43.910156 12.003906 L 27.066406 2.539063 C 26.429688 2.179688 25.714844 2 25 2 Z M 25 13 C 28.78125 13 32.277344 14.753906 34.542969 17.738281 L 30.160156 20.277344 C 28.84375 18.835938 26.972656 18 25 18 C 21.140625 18 18 21.140625 18 25 C 18 28.859375 21.140625 32 25 32 C 26.972656 32 28.84375 31.164063 30.160156 29.722656 L 34.542969 32.261719 C 32.277344 35.246094 28.78125 37 25 37 C 18.382813 37 13 31.617188 13 25 C 13 18.382813 18.382813 13 25 13 Z M 35 20 L 37 20 L 37 22 L 39 22 L 39 20 L 41 20 L 41 22 L 43 22 L 43 24 L 41 24 L 41 26 L 43 26 L 43 28 L 41 28 L 41 30 L 39 30 L 39 28 L 37 28 L 37 30 L 35 30 L 35 28 L 33 28 L 33 26 L 35 26 L 35 24 L 33 24 L 33 22 L 35 22 Z M 37 24 L 37 26 L 39 26 L 39 24 Z"></path>
+                                    </svg>
                                     <p>C#</p>
                                 </div>
                                 <div class="skill_card">
-                                    <i class="fa-brands fa-java"></i>
+                                    <i class="fa-brands fa-unity"></i>
                                     <p>Unity</p>
                                 </div>                           
                             </div>
@@ -176,15 +227,17 @@
                                     <a href="#projects_container_cards" title="Close" class="close">X</a>
                                     <h1>WiridLab Tour</h1>
                                     <hr>
-                                    <p class="modal-card_container_text">Proyecto de seis meses que consistió en la creación de un recorrido virtual por un laboratorio de telecomunicaciones, con interacción en objetos 3D. Fui responsable de la codificación de la aplicación y de la dirección del equipo de desarrollo. El proyecto fue negociado directamente con el cliente y gestionado mediante la metodología Scrum, lo que permitió una entrega ágil y organizada a lo largo de todo el proceso.</p>
-                                    <p class="modal-card_container_text">Puedes probar el aplicativo presionando el botón rojo.</p>
-                                    <div class="projects_card_labels_container">
-                                        <p class="projects_card_label">C#</p>
-                                        <p class="projects_card_label">Unity</p>
-                                        <p class="projects_card_label">Json</p>
-                                        <p class="projects_card_label">WebGL</p>
+                                    <div class="modal-info">
+                                        <p class="modal-card_container_text">Proyecto de seis meses que consistió en la creación de un recorrido virtual por un laboratorio de telecomunicaciones, con interacción en objetos 3D. Fui responsable de la codificación de la aplicación y de la dirección del equipo de desarrollo. El proyecto fue negociado directamente con el cliente y gestionado mediante la metodología Scrum, lo que permitió una entrega ágil y organizada a lo largo de todo el proceso.</p>
+                                        <p class="modal-card_container_text">Puedes probar el aplicativo presionando el botón rojo.</p>
+                                        <div class="projects_card_labels_container">
+                                            <p class="projects_card_label">C#</p>
+                                            <p class="projects_card_label">Unity</p>
+                                            <p class="projects_card_label">Json</p>
+                                            <p class="projects_card_label">WebGL</p>
+                                        </div>
+                                        <iframe frameborder="0" src="https://itch.io/embed/2036400?border_width=0&amp;bg_color=e1e1e1&amp;fg_color=1E3231&amp;link_color=e53b44" width="50%" height="165"><a href="https://kjrm20.itch.io/wiridlab-tour">WiridLab Tour by Karen Rincón</a></iframe>
                                     </div>
-                                    <iframe frameborder="0" src="https://itch.io/embed/2036400?border_width=0&amp;bg_color=e1e1e1&amp;fg_color=1E3231&amp;link_color=e53b44" width="50%" height="165"><a href="https://kjrm20.itch.io/wiridlab-tour">WiridLab Tour by Karen Rincón</a></iframe>
                                 </div>
                             </div>
 
@@ -359,7 +412,11 @@
                         </div>
                     </div>
                 </section>
-            </div>            
+            </div>   
+            
+            <div id="popup" class="msj__popup hidden">
+                <p class="msj__popup_text animate-down"></p>
+            </div>
         </main>
         
 

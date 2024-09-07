@@ -1,38 +1,3 @@
-/***********************************/
-// Control del menú de navegación //
-/*********************************/
-
-document.addEventListener("DOMContentLoaded", function() {
-    const navLinks = document.querySelectorAll('.nav_list_option a');
-    const sections = document.querySelectorAll('.sections_container > section');
-
-    function removeActiveClass() {
-        navLinks.forEach(link => {
-            link.parentElement.classList.remove('active');
-        });
-    }
-
-    function hideAllSections() {
-        sections.forEach(section => {
-            section.classList.add('hidden');
-        });
-    }
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); 
-
-            const targetSection = document.querySelector(this.getAttribute('href'));
-
-            removeActiveClass();
-            this.parentElement.classList.add('active');
-
-            hideAllSections();
-            targetSection.classList.remove('hidden'); 
-        });
-    });
-});
-
 /*****************************/
 // Configuración del idioma //
 /***************************/
@@ -107,9 +72,45 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 
-/***********************/
-// Menú de navegación //
-/*********************/
+/***********************************/
+// Control del menú de navegación //
+/*********************************/
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('.nav_list_option a');
+    const sections = document.querySelectorAll('.sections_container > section');
+
+    function removeActiveClass() {
+        navLinks.forEach(link => {
+            link.parentElement.classList.remove('active');
+        });
+    }
+
+    function hideAllSections() {
+        sections.forEach(section => {
+            section.classList.add('hidden');
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); 
+
+            const targetSection = document.querySelector(this.getAttribute('href'));
+
+            removeActiveClass();
+            this.parentElement.classList.add('active');
+
+            hideAllSections();
+            targetSection.classList.remove('hidden'); 
+        });
+    });
+});
+
+
+/**************************************/
+// Adaptación del Menú de navegación //
+/************************************/
 
 document.addEventListener("DOMContentLoaded", function() {
     const hamburgerIcon = document.getElementById('hamburger-icon');
@@ -120,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Crear botón de cerrar modal
     closeModalButton.classList.add('close-modal');
     closeModalButton.innerHTML = '<i class="fa-solid fa-times"></i>';
-    document.body.appendChild(closeModalButton);
+    nav.appendChild(closeModalButton);
     closeModalButton.style.display = 'none';
 
     // Mostrar el menú al hacer clic en el icono de hamburguesa
@@ -131,11 +132,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Función para mostrar el botón de hamburguesa solo en dispositivos móviles
-    function showHamburgerIcon() {
-        if (window.matchMedia("(max-width: 520px)").matches) {
+    function showButtonsIcons() {
+        if (window.matchMedia("(max-width: 520px)").matches && !nav.classList.contains('nav_visible')) {
             hamburgerIcon.style.display = 'block';
         } else {
             hamburgerIcon.style.display = 'none';
+            closeModalButton.style.display = 'block';
+        }
+        if(!window.matchMedia("(max-width: 520px)").matches){
             closeModalButton.style.display = 'none';
         }
     }
@@ -143,16 +147,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Cerrar el menú al hacer clic en el botón de cerrar
     closeModalButton.addEventListener('click', function() {
         nav.classList.remove('nav_visible');
-        closeModalButton.style.display = 'none';
-        showHamburgerIcon();
+        showButtonsIcons();
     });
 
     // Cerrar el menú al hacer clic fuera 
     window.addEventListener('click', function(event) {
         if (event.target === nav) {
             nav.classList.remove('nav_visible');
-            closeModalButton.style.display = 'none';
-            showHamburgerIcon();
+            showButtonsIcons();
         }
     });
 
@@ -160,18 +162,18 @@ document.addEventListener("DOMContentLoaded", function() {
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             nav.classList.remove('nav_visible'); 
-            closeModalButton.style.display = 'none';
-            showHamburgerIcon(); 
+            showButtonsIcons(); 
         });
     });
 
     // Evento de cambio de tamaño de pantalla
     window.addEventListener('resize', function() {
-        showHamburgerIcon();
+        showButtonsIcons();
     });
     
-    showHamburgerIcon();
+    showButtonsIcons();
 });
+
 
 
 /*************************/
@@ -197,4 +199,25 @@ async function handleSubmit(event){
         this.reset()
         alert('Thanks you for contacted me, I will write you soon!')
     }
+}
+
+
+/*************************/
+//Inicio - Copiar email //
+/***********************/
+
+function copyEmail(){
+    var textarea = document.getElementById('email-text');
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(textarea.value).then(function() {
+        let mensaje = document.getElementById('popup');
+        mensaje.querySelector('p').innerHTML = "El correo ha sido copiado al portapapeles."
+        mensaje.classList.remove('hidden');
+        setTimeout(()=>{
+            mensaje.classList.add('hidden');
+        },2500)
+    }).catch(function(error) {
+        console.error("Error al copiar el texto: ", error);
+    });
 }
