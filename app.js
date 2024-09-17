@@ -252,6 +252,50 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+/*************************/
+//Inicio - Copiar email //
+/***********************/
+
+function copyEmail(){
+    var textarea = document.getElementById('email-text');
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(textarea.value).then(function() {
+        let mensaje = document.getElementById('popup');
+        if(langButton.textContent == "ES"){
+            mensaje.querySelector('p').innerHTML = "El correo ha sido copiado al portapapeles.";
+        }else{
+            mensaje.querySelector('p').innerHTML = "The e-mail has been copied to the clipboard.";
+        }
+        mensaje.classList.remove('hidden');
+        setTimeout(()=>{
+            mensaje.classList.add('hidden');
+        },2500)
+    }).catch(function(error) {
+        console.error("Error al copiar el texto: ", error);
+    });
+}
+
+
+/************************************/
+//Proyectos - Visibilidad por área //
+/**********************************/
+const selectElement = document.getElementById('area_selector');
+const div1 = document.getElementById('projects_development');
+const div2 = document.getElementById('projects_design');
+
+selectElement.addEventListener('change', (event) => {
+  const value = event.target.value; 
+
+  if (value === '1') {
+    div1.classList.remove('hidden');
+    div2.classList.add('hidden');
+  } else {
+    div1.classList.add('hidden');
+    div2.classList.remove('hidden');
+  }
+});
+
 
 /*************************/
 //Contacto - formulario //
@@ -287,27 +331,3 @@ async function handleSubmit(event){
     }
 }
 
-
-/*************************/
-//Inicio - Copiar email //
-/***********************/
-
-function copyEmail(){
-    var textarea = document.getElementById('email-text');
-    textarea.select();
-    textarea.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(textarea.value).then(function() {
-        let mensaje = document.getElementById('popup');
-        if(langButton.textContent == "ES"){
-            mensaje.querySelector('p').innerHTML = "El correo ha sido copiado al portapapeles.";
-        }else{
-            mensaje.querySelector('p').innerHTML = "The e-mail has been copied to the clipboard.";
-        }
-        mensaje.classList.remove('hidden');
-        setTimeout(()=>{
-            mensaje.classList.add('hidden');
-        },2500)
-    }).catch(function(error) {
-        console.error("Error al copiar el texto: ", error);
-    });
-}

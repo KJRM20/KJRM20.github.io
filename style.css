@@ -342,7 +342,9 @@ hr{
 
 .cards_container{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
+    min-height: 300px;
     gap: 15px;
 }
 
