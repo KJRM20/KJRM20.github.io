@@ -17,15 +17,24 @@ function applyTranslations(translations) {
   document.querySelector('.home_about_title p').textContent = translations.home.description;
   const aboutParagraph = document.querySelector('.home_about_text p');
   aboutParagraph.innerHTML = translations.home.about;
+  const sendLink = document.querySelector('.home_about_social_email a');
+  sendLink.setAttribute("title",translations.home.mail);
+  const copyMail = document.querySelector('.home_about_social_email button');
+  copyMail.setAttribute("title",translations.home.copyBtn);
 
-  // Sección Nav (solo cambiamos el texto, manteniendo los íconos)
+  // Sección Nav
   const navItems = document.querySelectorAll('.nav_list li a');
   document.querySelector(".nav_title").textContent = translations.nav.title_nav;
   navItems[0].childNodes[1].textContent = translations.nav.home;
+  navItems[0].setAttribute("title",translations.nav.home);
   navItems[1].childNodes[1].textContent = translations.nav.skills;
+  navItems[1].setAttribute("title",translations.nav.skills);
   navItems[2].childNodes[1].textContent = translations.nav.projects;
+  navItems[2].setAttribute("title",translations.nav.projects);
   navItems[3].childNodes[1].textContent = translations.nav.career;
+  navItems[3].setAttribute("title",translations.nav.career);
   navItems[4].childNodes[1].textContent = translations.nav.contact;
+  navItems[4].setAttribute("title",translations.nav.contact);
 
   // Sección Habilidades (Skills)
   document.querySelector('.skills_container .section_title h1').textContent = translations.skills.title;
@@ -39,13 +48,80 @@ function applyTranslations(translations) {
   document.querySelector('.projects_container .section_title p').textContent = translations.projects.selectArea;
   document.querySelector('#area_selector option[value="1"]').textContent = translations.projects.areas.development;
   document.querySelector('#area_selector option[value="2"]').textContent = translations.projects.areas.cgArt;
-  //document.querySelector('.projects_card_info p').textContent = translations.projects.projectDescription;
+  const cards = document.querySelectorAll('#projects_container_cards .projects_card_info');
+  cards.forEach((card, index) => {
+    const cardKey = `card_${index + 1}`; 
+
+    card.querySelector('h2').textContent = translations.projects[cardKey].title;
+    card.querySelector('p').textContent = translations.projects[cardKey].shortDescription;
+    card.querySelector('a').innerHTML = translations.projects.card_btn;
+
+    const modal = document.querySelector(`#modal-card-${index + 1} .modal-card`);
+    if (modal) {
+        modal.querySelector('h1').textContent = translations.projects[cardKey].title;
+        modal.querySelectorAll('.modal-info p')[0].textContent = translations.projects[cardKey].description;
+        modal.querySelectorAll('.modal-info p')[1].innerHTML = translations.projects.callaction;
+        if(modal.querySelector('.modal-info a')){
+            modal.querySelector('.modal-info a').textContent = translations.projects.modal_btn;
+        }
+    }
+  });
 
   // Sección Trayectoria (Career)
   document.querySelector('.career-path_container .section_title h1').textContent = translations.career.title;
   document.querySelector('h2 i.fa-briefcase').nextSibling.textContent = translations.career.experience;
+  const timeline_experience = document.querySelectorAll('#experience-container ol li');
+  timeline_experience.forEach((item, index) => {
+
+    const title = item.querySelector('h3');
+    const start = item.querySelectorAll('time')[0]; 
+    const end = item.querySelectorAll('time')[1]; 
+    const description = item.querySelectorAll('p')[1]; 
+    
+    const experienceKey = `experience_${index + 1}`;
+    const experienceData = translations.career[experienceKey];
+
+    if(experienceData){
+        start.textContent = experienceData.start;
+        end.textContent = experienceData.end;
+        title.textContent = experienceData.title;
+        description.textContent = experienceData.description;
+    }  
+  });
   document.querySelector('h2 i.fa-graduation-cap').nextSibling.textContent = translations.career.education;
+  const timeline_education = document.querySelectorAll('#education-container ol li');
+  timeline_education.forEach((item, index) => {
+
+    const time = item.querySelector('time');
+    const level = item.querySelectorAll('p')[0]; 
+    const description = item.querySelectorAll('p')[1]; 
+    
+    const experienceKey = `education_${index + 1}`;
+    const experienceData = translations.career[experienceKey];
+
+    if(experienceData){
+        time.textContent = experienceData.time;
+        level.textContent = experienceData.level;
+        description.textContent = experienceData.description;
+    }  
+  });
   document.querySelector('h2 i.fa-book').nextSibling.textContent = translations.career.otherCourses;
+  const timeline_courses = document.querySelectorAll('#courses-container ol li');
+  timeline_courses.forEach((item, index) => {
+
+    const time = item.querySelector('time');
+    const title = item.querySelector('h3'); 
+    const description = item.querySelectorAll('p')[1]; 
+    
+    const experienceKey = `course_${index + 1}`;
+    const experienceData = translations.career[experienceKey];
+
+    if(experienceData){
+        time.textContent = experienceData.time;
+        title.textContent = experienceData.title;
+        description.textContent = experienceData.description;
+    }  
+  });
 
   // Sección Contacto
   document.querySelector('.contact_container .section_title h1').textContent = translations.contact.title;

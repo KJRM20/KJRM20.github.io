@@ -3,7 +3,9 @@
       "home": {
         "title": "Karen Rincón",
         "description": "Ingeniera en Multimedia",
-        "about": "Me especializo en el <strong>Desarrollo Web</strong> y <strong>Desarrollo de software</strong>. Cuento con experencia en motores de desarrollo como Unity. Además, tengo una gran pasión por el CG Art. "
+        "about": "Me especializo en el <strong>Desarrollo Web</strong> y <strong>Desarrollo de software</strong>. Cuento con experencia en motores de desarrollo como Unity. Además, tengo una gran pasión por el CG Art. ",
+        "mail": "Enviar correo",
+        "copyBtn": "Copiar correo"
       },
       "nav": {
         "title_nav":"Portafolio",
@@ -25,18 +27,61 @@
         "selectArea": "Selecciona el área",
         "areas": {
           "development": "Desarrollo",
-          "cgArt": "Arte CG"
+          "cgArt": "Diseño"
         },
-        "projectDescription": "Esta es una descripción del proyecto"
+        "card_1": {
+          "title":"WiridLab Tour",
+          "shortDescription":"Recorrido virtual por un laboratorio con interacción en objetos 3D.",
+          "description":"Proyecto de seis meses que consistió en la creación de un recorrido virtual por un laboratorio de telecomunicaciones, con interacción en objetos 3D. Fui responsable de la codificación de la aplicación y de la dirección del equipo de desarrollo. El proyecto fue negociado directamente con el cliente y gestionado mediante la metodología Scrum, lo que permitió una entrega ágil y organizada a lo largo de todo el proceso."
+        },
+        "card_2": {
+          "title":"Encriptador Web",
+          "shortDescription":"Página Web responsive, permite encriptar información basada en reglas.",
+          "description":"Proyecto de un mes, desarrollado como parte del primer challenge del Proyecto ONE de Oracle+Alura LATAM. El reto consiste en crear una página web que permita a los usuarios encriptar y desencriptar texto de forma sencilla, demostrando la habilidad para construir una solución funcional y eficiente."
+        },
+        "card_btn": "<i class='fa-solid fa-plus'></i> Más info",
+        "callaction": "Puedes probar la aplicación presionando el <strong>botón rojo.</strong>",
+        "modal_btn": "Entrar al sitio web"
       },
       "career": {
         "title": "Trayectoria",
         "experience": "  Experiencia Laboral",
+        "experience_1":{
+          "start":"Noviembre 2023",
+          "end":"Mayo 2024",
+          "title":"Practicante TI",
+          "description":"Desarrollo de experiencia en RA mediante 8thWall. Desarrollo de maquetaciones HTML y CSS. Creación de tableros de visualización con Looker Studio. Creación de contenido multimedia para capacitación de personal."
+        },
         "education": "  Educación",
-        "otherCourses": "  Otros Cursos"
+        "education_1":{
+          "time":"Septiembre 2024",
+          "level":"Ingeniería en Multimedia",
+          "description":"Mérito académico: Cum Laude."
+        },
+        "education_2":{
+          "time":"Diciembre 2018",
+          "level":"Bachiller, Especialidad Electricidad y Electrónica",
+          "description":"Especialidad electricidad y electrónica. Técnico en Bajas Tensiones."
+        },
+        "otherCourses": "  Otros Cursos",
+        "course_1":{
+          "time":"Septiembre 2024",
+          "title":"Curso de Desarrollo web",
+          "description":"Temas: HTML, CSS, JS, Angular, Typescript."
+        },
+        "course_2":{
+          "time":"Septiembre 2024",
+          "title":"Bootcamp Inteligencia Artificial",
+          "description":"Temas: Python, Numpy, Pandas, Búsquedas informadas y no informadas, Análisis de datos."
+        },
+        "course_3":{
+          "time":"En curso",
+          "title":"Certificación ONE - Oracle Next Education",
+          "description":"Temas: HTML, CSS, JS, Java, Spring Boot."
+        }
       },
       "contact": {
-        "title": "Envíame un mensaje!",
+        "title": "¡Envíame un mensaje!",
         "description": "Si tienes alguna pregunta o propuesta, o simplemente quieres decir hola."
       },
       "form": {
@@ -51,8 +96,8 @@
         "title": "Karen Rincón",
         "description": "Multimedia Engineer",
         "about": "I specialize in <strong>Web Development</strong> and <strong>Software Development</strong>. I have experience with development engines like Unity. Additionally, I have a great passion for CG Art.",
-        "socialText": "Follow me on my social media:",
-        "contact": "Contact"
+        "mail": "Send email",
+        "copyBtn": "Copy email address"
       },
       "nav": {
         "title_nav":"Portfolio",
@@ -74,15 +119,58 @@
         "selectArea": "Select an area",
         "areas": {
           "development": "Development",
-          "cgArt": "CG Art"
+          "cgArt": "Design"
         },
-        "projectDescription": "This is a project description"
+        "card_1": {
+          "title":"WiridLab Tour",
+          "shortDescription":"Virtual tour through a laboratory with 3D object interaction.",
+          "description":"Six-month project that consisted in the creation of a virtual tour of a telecommunications laboratory, with interaction in 3D objects. I was responsible for coding the application and leading the development team. The project was negotiated directly with the client and managed using the Scrum methodology, which allowed an agile and organized delivery throughout the process."
+        },
+        "card_2": {
+          "title":"Web Encryptor",
+          "shortDescription":"Responsive website, allows to encrypt information based on rules.",
+          "description":"One month project, developed as part of the first challenge of Oracle+Alura LATAM Project ONE. The challenge consists of creating a web page that allows users to encrypt and decrypt text in a simple way, demonstrating the ability to build a functional and efficient solution."
+        },
+        "card_btn": "<i class='fa-solid fa-plus'></i> More info",
+        "callaction": "You can test the application by pressing the <strong>red button.</strong>",
+        "modal_btn": "Enter the website"
       },
       "career": {
         "title": "Career Path",
         "experience": "  Work Experience",
+        "experience_1":{
+          "start":"November 2023",
+          "end":"May 2024",
+          "title":"Intern TI",
+          "description":"Development of AR experience using 8thWall. HTML and CSS layout development. Creation of visualization dashboards with Looker Studio. Creation of multimedia content for staff training."
+        },
         "education": "  Education",
-        "otherCourses": "  Other Courses"
+        "education_1":{
+          "time":"September 2024",
+          "level":"Multimedia Engineering",
+          "description":"Academic merit: Cum Laude."
+        },
+        "education_2":{
+          "time":"December 2018",
+          "level":"Bachelor's Degree, Electricity and Electronics Specialty",
+          "description":"Specialized in electricity and electronics. Low Voltage Technician."
+        },
+        "otherCourses": "  Other Courses",
+        "course_1":{
+          "time":"September 2024",
+          "title":"Course about Web Development",
+          "description":"Topics: HTML, CSS, JS, Angular, Typescript."
+        },
+        "course_2":{
+          "time":"September 2024",
+          "title":"Artificial Intelligence Bootcamp",
+          "description":"Topics: Python, Numpy, Pandas, Informed and Uninformed searches, Data analysis."
+        },
+        "course_3":{
+          "time":"In progress",
+          "title":"ONE Certification - Oracle Next Education",
+          "description":"Topics: HTML, CSS, JS, Java, Spring Boot."
+        }
       },
       "contact": {
         "title": "Send me a message!",

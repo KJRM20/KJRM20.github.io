@@ -200,14 +200,14 @@
                         <div>
                             <select name="area" id="area_selector" class="projects_select">
                                 <option value="1">Desarrollo</option>
-                                <option value="2">Arte CG</option>
+                                <option value="2">Diseño</option>
                             </select>
                         </div>
                     </div>
                     <div class="projects_container_cards" id="projects_container_cards">
                         <div class="projects_cards_development cards_container">
 
-                            <div class="projects_card">
+                            <div id="card-1" class="projects_card">
                                 <div class="projects_card_img">
                                     <img src="Assets/Projects/Wirid-1.png" loading="lazy" alt="Captura de proyecto Wirid">
                                 </div>
@@ -241,7 +241,7 @@
                                 </div>
                             </div>
 
-                            <div class="projects_card">
+                            <div id="card-2" class="projects_card">
                                 <div class="projects_card_img">
                                     <img src="Assets/Projects/Encriptador.png" loading="lazy" alt="Captura de proyecto Encriptador">
                                 </div>
@@ -261,40 +261,24 @@
                                     <a href="#projects_container_cards" title="Close" class="close">X</a>
                                     <h1>Encriptador Web</h1>
                                     <hr>
-                                    <p class="modal-card_container_text">Proyecto de un mes, desarrollado como parte del primer challenge del Proyecto ONE de Oracle+Alura LATAM.
-                                        El reto consiste en crear una página web que permita a los usuarios encriptar y desencriptar texto de forma sencilla, demostrando la habilidad para construir una solución funcional y eficiente.</p>
-                                    <p class="modal-card_container_text">Puedes probar el aplicativo presionando el botón rojo.</p>
-                                    <div class="projects_card_labels_container">
-                                        <p class="projects_card_label">HTML</p>
-                                        <p class="projects_card_label">CSS</p>
-                                        <p class="projects_card_label">JS</p>
+                                    <div class="modal-info">
+                                        <p class="modal-card_container_text">Proyecto de un mes, desarrollado como parte del primer challenge del Proyecto ONE de Oracle+Alura LATAM.
+                                            El reto consiste en crear una página web que permita a los usuarios encriptar y desencriptar texto de forma sencilla, demostrando la habilidad para construir una solución funcional y eficiente.</p>
+                                        <p class="modal-card_container_text">Puedes probar el aplicativo presionando el botón rojo.</p>
+                                        <div class="projects_card_labels_container">
+                                            <p class="projects_card_label">HTML</p>
+                                            <p class="projects_card_label">CSS</p>
+                                            <p class="projects_card_label">JS</p>
+                                        </div>
+                                        <a class="btn-rojo" href="https://kjrm20.github.io/Encriptador-Challenge/" target="_new">Entrar al sitio web</a>
                                     </div>
-                                    <a class="btn-rojo" href="https://kjrm20.github.io/Encriptador-Challenge/" target="_new">Entrar al sitio web</a>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="projects_cards_art cards_container hidden">
+                        <div class="projects_cards_design cards_container hidden">
                             
-                            <div class="projects_card">
-                                <div class="projects_card_img">
-                                    <img src="Resources/3D Art/51, scene I.png" loading="lazy" alt="Render de proyecto '51'">
-                                </div>
-                                <div class="projects_card_info">
-                                    <h2>Título del proyecto</h2>
-                                    <p>Esta es una descripción del proyecto</p> 
-                                    <p class="projects_card_label">JavaScript</p>
-                                    <a href="#modal-card-1"><i class="fa-solid fa-plus"></i> Más info</a>
-                                </div>
-                            </div>
-                            <div id="modal-card-1" class="modal-card_container">
-                                <div class="modal-card">
-                                    <a href="#projects_container_cards" title="Close" class="close">X</a>
-                                    <h1>Título del proyecto</h1>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nulla minima rerum libero provident. Sequi, corporis vel culpa repudiandae harum est ratione iusto maiores, ipsam tempora aspernatur explicabo, consequuntur delectus?</p>
-                                    <div>etiquetas</div>
-                                </div>
-                            </div>
+                           Nada por aquí, vuelve más tarde.
 
                         </div>
                     </div>
@@ -303,7 +287,7 @@
                     <div class="section_title">
                         <h1>Trayectoria</h1>
                     </div>
-                    <div>
+                    <div id="experience-container">
                         <h2><i class="fa-solid fa-briefcase"></i> Experiencia Laboral</h2>
                         <hr>
                         <ol class="time_line">
@@ -323,11 +307,11 @@
                             </li>
                         </ol>                            
                     </div>
-                    <div>
+                    <div id="education-container">
                         <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
                         <hr>
                         <ol class="time_line">
-                            <li class="item_time_line">
+                            <li id="edu-item-1" class="item_time_line">
                                 <div>
                                     <div class="decorativeCircleList"></div>
                                     <time datetime="2024-09">Septiembre 2024</time>
@@ -338,7 +322,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="item_time_line">
+                            <li id="edu-item-2" class="item_time_line">
                                 <div>
                                     <div class="decorativeCircleList"></div>
                                     <time datetime="2018-12">Diciembre 2018</time>
@@ -351,11 +335,11 @@
                             </li>
                         </ol>         
                     </div>
-                    <div>
+                    <div id="courses-container">
                         <h2><i class="fa-solid fa-book"></i> Otros Cursos</h2>
                         <hr>
                         <ol class="time_line">
-                            <li class="item_time_line">
+                            <li id="courses-item-1" class="item_time_line">
                                 <div>
                                     <div class="decorativeCircleList"></div>
                                     <time datetime="2024-09">Septiembre 2024</time>
@@ -366,7 +350,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="item_time_line">
+                            <li id="courses-item-2" class="item_time_line">
                                 <div>
                                     <div class="decorativeCircleList"></div>
                                     <time datetime="2018-12">En curso</time>
@@ -377,7 +361,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="item_time_line">
+                            <li id="courses-item-3" class="item_time_line">
                                 <div>
                                     <div class="decorativeCircleList"></div>
                                     <time datetime="2018-12">En curso</time>
