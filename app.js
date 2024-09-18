@@ -270,7 +270,7 @@ function copyEmail(){
         mensaje.classList.remove('hidden');
         setTimeout(()=>{
             mensaje.classList.add('hidden');
-        },2500)
+        },3500)
     }).catch(function(error) {
         console.error("Error al copiar el texto: ", error);
     });
@@ -320,14 +320,14 @@ async function handleSubmit(event){
         this.reset()
         let mensaje = document.getElementById('popup');
         if(langButton.textContent == "ES"){
-            mensaje.querySelector('p').innerHTML = "Gracias por ponerte en contacto conmigo, ¡te escribiré pronto!";
+            mensaje.querySelector('p').innerHTML = "Gracias por ponerte en contacto conmigo<br>¡Te escribiré pronto!";
         }else{
-            mensaje.querySelector('p').innerHTML = "Thanks you for contacted me, I will write you soon!";
+            mensaje.querySelector('p').innerHTML = "Thanks you for contacted me<br>I will write you soon!";
         }
         mensaje.classList.remove('hidden');
         setTimeout(()=>{
             mensaje.classList.add('hidden');
-        },2500)
+        },3500)
     }
 }
 

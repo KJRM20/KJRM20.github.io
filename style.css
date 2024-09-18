@@ -5,6 +5,7 @@
     --main-bg-color:#dad6d6a2;
     --secondary-bg-color:#fff;
     --main-text-color:#1E3231;
+    --secondary-text-color:#8e8266;
     --main-border-color:#DAD6D6;
     --main-label-bg-color: rgba(244,172,69,0.2);
     --main-btn-bg-color:#92BFB1;
@@ -14,6 +15,7 @@
     --terciary-btn-bg-color:#fff;
     --terciary-btn-bg-hover-color:#e1e1e1;
     --main-gradient: linear-gradient(90deg, rgba(244,172,69,0.5) 0%, rgba(146,191,177,0.5) 100%);
+    --secondary-gradient: linear-gradient(90deg, rgba(244,172,69,0.2) 0%, rgba(146,191,177,0.2) 100%);
     --primary-gradient-color: rgba(244,172,69,0.5);
     --secondary-gradient-color: rgba(146,191,177,0.5);
 }
@@ -135,7 +137,7 @@ body::before {
 }
 
 .active a{
-    color: #8e8266;
+    color: var(--secondary-text-color);
 }
 
 .sections_container{
@@ -662,12 +664,13 @@ hr{
 
 .msj__popup_text{
     padding: 10px 15px;
-    background-color: var(--secondary-bg-color);    
+    background: var(--secondary-bg-color);    
     color: var(--main-text-color);
     font-size: 0.75rem;
-    font-weight: 400;
+    font-weight: 500;
+    text-align: center;
     border-radius: 10px;
-    box-shadow: 0 24px 32px -8px #00000014;
+    box-shadow: 0 24px 32px -8px #00000028;
 }
 
 .hidden{
@@ -700,7 +703,7 @@ hr{
 /* Animaciones */
 
 .animate-down {
-    animation: intoDown 2.5s ease-in-out forwards;
+    animation: intoDown 3.5s ease-in-out forwards;
 }
 
 @keyframes intoDown {
@@ -710,13 +713,13 @@ hr{
     }
     15% {
         top:0;
-        transform: translateY(50%) scale(1.1);
+        transform: translateY(100%) scale(1.1);
         opacity: 1;
     }
 
     85% {
         top:0;
-        transform: translateY(50%) scale(1.1);
+        transform: translateY(100%) scale(1.1);
         opacity: 1;
     }
 
