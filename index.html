@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Autora: Karen Rincón, 2024, Portafolio.">
+        <meta name="description" content="Autora: Karen Rincón, 2025, Portafolio.">
         <title>Karen Rincón</title>
         <link href="styles/style.css" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="assets/logo/Favicon.ico">
@@ -13,9 +13,9 @@
             <div><img src="./assets/logo/Logo.png" loading="lazy" alt="logo"></div>
             <div class="config_container">
                 <div class="config">
-                    <button id="btn-language" class="circle-btn" title="Language">ES</button>
-                    <button class="circle-btn hidden" title="Theme"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
-                    <button class="hamburger-icon" id="hamburger-icon" title="Menu"><i class="fa-solid fa-bars"></i></button>
+                    <button id="btn-language" class="circle-btn" data-i18n-title="HEADER.btn_language">ES</button>
+                    <button class="circle-btn hidden" data-i18n-title="HEADER.btn_theme"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
+                    <button class="hamburger-icon" id="hamburger-icon" data-i18n-title="HEADER.btn_menu"><i class="fa-solid fa-bars"></i></button>
                 </div>
             </div>
         </header>
@@ -24,19 +24,19 @@
                 <h1 class="nav_title" data-i18n="SIDENAV.title_nav"></h1>                    
                 <ul class="nav_list" id="nav_list">
                     <li class="nav_list_option active">
-                        <a href="#home" title="Home"><i class="fa-solid fa-house"></i> <span data-i18n="SIDENAV.home"></span></a>
+                        <a href="#home" data-i18n-title="SIDENAV.home"><i class="fa-solid fa-house"></i> <span data-i18n="SIDENAV.home"></span></a>
                     </li>
                     <li class="nav_list_option">
-                        <a href="#skills" title="Skills"><i class="fa-solid fa-list"></i> <span data-i18n="SIDENAV.skills"></span></a>
+                        <a href="#skills" data-i18n-title="SIDENAV.skills"><i class="fa-solid fa-list"></i> <span data-i18n="SIDENAV.skills"></span></a>
                     </li>
                     <li class="nav_list_option">
-                        <a href="#projects" title="Projects"><i class="fa-solid fa-folder"></i> <span data-i18n="SIDENAV.projects"></span></a>
+                        <a href="#projects" data-i18n-title="SIDENAV.projects"><i class="fa-solid fa-folder"></i> <span data-i18n="SIDENAV.projects"></span></a>
                     </li>
                     <li class="nav_list_option">
-                        <a href="#career-path" title="Career Path"><i class="fa-solid fa-signs-post"></i><span data-i18n="SIDENAV.career"></span></a>
+                        <a href="#career-path" data-i18n-title="SIDENAV.career"><i class="fa-solid fa-signs-post"></i><span data-i18n="SIDENAV.career"></span></a>
                     </li>
                     <li class="nav_list_option">
-                        <a href="#contact" title="Contact"><i class="fa-solid fa-envelope"></i> <span data-i18n="SIDENAV.contact"></span></a>
+                        <a href="#contact" data-i18n-title="SIDENAV.contact"><i class="fa-solid fa-envelope"></i> <span data-i18n="SIDENAV.contact"></span></a>
                     </li>
                 </ul>                                
             </nav>
@@ -59,8 +59,8 @@
                             </div>
                             <div class="home_about_social_email">
                                 <textarea id="email-text" name="email" readonly>karenrinconjm@outlook.com</textarea><br>
-                                <a href="mailto:karenrinconjm@outlook.com" class="circle-btn" title="Enviar mail"><i class="fa-solid fa-paper-plane"></i></a>
-                                <button class="circle-btn" title="Copiar" onclick="copyEmail()"><i class="fa-solid fa-copy"></i></button>
+                                <a href="mailto:karenrinconjm@outlook.com" class="circle-btn" data-i18n-title="HOME.mail"><i class="fa-solid fa-paper-plane"></i></a>
+                                <button class="circle-btn" data-i18n-title="HOME.copyBtn" onclick="copyEmail()"><i class="fa-solid fa-copy"></i></button>
                             </div>
                         </div>                        
                     </div>

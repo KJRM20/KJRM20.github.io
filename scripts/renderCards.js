@@ -31,11 +31,11 @@ function renderProjectsCards(translations, selectedArea) {
             }
 
             if (card.repo) {
-            buttonsHTML += `<a class="btn-rojo" href="${card.repo}" target="_blank">Ver repositorio</a>`;
+            buttonsHTML += `<a class="btn-rojo" href="${card.repo}" target="_blank">${area.cards.modal_btn2}</a>`;
             }
 
             if (card.path) {
-            buttonsHTML += `<a class="btn-rojo" href="${card.path}" download>Descargar ejecutable</a>`;
+            buttonsHTML += `<a class="btn-rojo" href="${card.path}" download>${area.cards.modal_btn3}</a>`;
             }
 
 

@@ -1,4 +1,9 @@
 {
+  "HEADER":{
+    "btn_language" : "English",
+    "btn_theme" : "Theme",
+    "btn_menu" : "Menu"
+  },
   "SIDENAV": {
     "title_nav": "Portfolio",
     "home": "Home",
@@ -30,6 +35,8 @@
         "cards": {
           "card_btn": "View more",
           "modal_btn": "View demo",
+          "modal_btn2": "View repository",
+          "modal_btn3": "Download executable",
           "callaction": "Want to know more? Check out the links below.",
           "card_1": {
             "image": "Portafolio",
@@ -64,6 +71,8 @@
         "cards": {
           "card_btn": "View more",
           "modal_btn": "View demo",
+          "modal_btn2": "View repository",
+          "modal_btn3": "Download executable",
           "callaction": "Want to know more? Check out the links below.",
           "card_1": {
             "image": "uno",
@@ -110,6 +119,8 @@
         "cards": {
           "card_btn": "View more",
           "modal_btn": "View demo",
+          "modal_btn2": "View repository",
+          "modal_btn3": "Download executable",
           "callaction": "Want to know more? Check out the links below.",
           "card_1": {
             "image": "WiridLAB",

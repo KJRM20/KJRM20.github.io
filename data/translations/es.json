@@ -1,4 +1,9 @@
 {
+  "HEADER":{
+    "btn_language" : "Español",
+    "btn_theme" : "Tema",
+    "btn_menu" : "Menú"
+  },
   "SIDENAV": {
     "title_nav": "Portafolio",
     "home": "Inicio",
@@ -10,7 +15,7 @@
   "HOME": {
     "title": "Karen Rincón",
     "description": "Ingeniera en Multimedia",
-    "about": "Me especializo en el <strong>Desarrollo Web</strong> y el <strong>Desarrollo de Software</strong>. Manejo arquitecturas como <strong>DDD</strong>, <strong>hexagonal</strong> y <strong>MVC</strong>, y tengo conocimientos en <strong>patrones de </strong> como Singleton, Observer, Factory, entre otros.<br><br> Cuento con experiencia en motores de desarrollo como <strong>Unity</strong>, creando interacciones en <strong>Realidad Virtual</strong> (RV) y <strong>Realidad Aumentada</strong> (RA). Además, tengo una gran pasión por el arte CG (Computer Graphics).",
+    "about": "Me especializo en el <strong>Desarrollo Web</strong> y el <strong>Desarrollo de Software</strong>. Manejo arquitecturas como <strong>DDD</strong>, <strong>hexagonal</strong> y <strong>MVC</strong>, y tengo conocimientos en <strong>patrones de diseño</strong> como Singleton, Observer, Factory, entre otros.<br><br> Cuento con experiencia en motores de desarrollo como <strong>Unity</strong>, creando interacciones en <strong>Realidad Virtual</strong> (RV) y <strong>Realidad Aumentada</strong> (RA). Además, tengo una gran pasión por el arte CG (Computer Graphics).",
     "mail": "Enviar correo",
     "copyBtn": "Copiar correo"
   },
@@ -30,6 +35,8 @@
         "cards": {
           "card_btn": "Ver más",
           "modal_btn": "Ver demo",
+          "modal_btn2": "Ver repositorio",
+          "modal_btn3": "Descargar ejecutable",
           "callaction": "¿Quieres saber más? Revisa los enlaces a continuación.",
           "card_1": {
             "image": "Portafolio",
@@ -64,6 +71,8 @@
         "cards": {
           "card_btn": "Ver más",
           "modal_btn": "Ver demo",
+          "modal_btn2": "Ver repositorio",
+          "modal_btn3": "Descargar ejecutable",
           "callaction": "¿Quieres saber más? Revisa los enlaces a continuación.",
           "card_1": {
             "image": "uno",
@@ -110,6 +119,8 @@
         "cards": {
           "card_btn": "Ver más",
           "modal_btn": "Ver demo",
+          "modal_btn2": "Ver repositorio",
+          "modal_btn3": "Descargar ejecutable",
           "callaction": "¿Quieres saber más? Revisa los enlaces a continuación.",
           "card_1": {
             "image": "WiridLAB",
