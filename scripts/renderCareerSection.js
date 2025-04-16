@@ -24,8 +24,8 @@ function renderCareerSection(translations) {
             <div class="decorativeCircleList"></div>
             ${dateRanges.join(' | ')}
             <h3>${exp.title}</h3>
-            <p>${exp.enterprise}</p>
-            <p>${exp.description}</p>
+            <p class="item_institute">${exp.enterprise}</p>
+            <p class="item_description">${exp.description}</p>
           </div>
         </li>
       `;
@@ -44,8 +44,8 @@ function renderCareerSection(translations) {
             <div class="decorativeCircleList"></div>
             <time datetime="${edu.time}">${edu.time}</time>
             <h3>${edu.institute}</h3>
-            <p>${edu.level}</p>
-            <p>${edu.description}</p>
+            <p class="item_institute">${edu.level}</p>
+            <p class="item_description">${edu.description}</p>
           </div>
         </li>
       `;
@@ -64,8 +64,8 @@ function renderCareerSection(translations) {
             <div class="decorativeCircleList"></div>
             <time datetime="${course.time}">${course.time}</time>
             <h3>${course.title}</h3>
-            <p>${course.institute}</p>
-            <p>${course.description}</p>
+            <p class="item_institute">${course.institute}</p>
+            <p class="item_description">${course.description}</p>
           </div>
         </li>
       `;

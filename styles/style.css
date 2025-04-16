@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap&effect=emboss');
 
 :root{
-    /*Colors*/
     --main-bg-color:#dad6d6a2;
     --secondary-bg-color:#fff;
     --main-text-color:#1E3231;
     --secondary-text-color:#8e8266;
+    --terciary-text-color:#c7c7c7;
     --main-border-color:#DAD6D6;
     --main-label-bg-color: rgba(244,172,69,0.2);
     --main-btn-bg-color:#92BFB1;
     --main-btn-bg-hover-color:#5d7b72;
     --secondary-btn-bg-color:#e53b44;
-    --secondary-btn-bg-hover-color:#c3363d;
+    --secondary-btn-bg-hover-color:#ff1b27;
     --terciary-btn-bg-color:#fff;
     --terciary-btn-bg-hover-color:#e1e1e1;
     --main-gradient: linear-gradient(90deg, rgba(244,172,69,0.5) 0%, rgba(146,191,177,0.5) 100%);
@@ -19,6 +19,24 @@
     --primary-gradient-color: rgba(244,172,69,0.5);
     --secondary-gradient-color: rgba(146,191,177,0.5);
 }
+
+.dark-theme {
+    --main-bg-color: #1E1E1E;
+    --secondary-bg-color: #252525;
+    --main-text-color: #E0E0E0;
+    --secondary-text-color:#726953;
+    --terciary-text-color:#353434;
+    --main-border-color: #444;
+    --main-label-bg-color: rgba(244,172,69,0.1);
+    --main-btn-bg-color:#5a716c;
+    --main-btn-bg-hover-color:#85cfb9;
+    --terciary-btn-bg-color: #2C2C2C;
+    --terciary-btn-bg-hover-color: #3A3A3A;
+    --main-gradient: linear-gradient(90deg, #e9c28eb9 0%, #b8ccc4c2 100%);
+    --secondary-gradient: linear-gradient(90deg, rgba(244,172,69,0.1) 0%, rgba(146,191,177,0.1) 100%);
+    --secondary-gradient-color: #b8ccc4d3;
+}
+
 
 *, 
 *:after,
@@ -32,6 +50,7 @@
 body{
     display: flex;
     flex-direction: column;
+    background-color: var(--main-bg-color);
     padding: 35px;
     height: 100vh;
     font-family: "Inter", sans-serif;
@@ -88,7 +107,7 @@ body::before {
 }
 
 .nav_title{
-    color:#c7c7c7;
+    color:var(--terciary-text-color);
     text-align: center;
     font-size: 2.5rem;
     font-weight: 900;
@@ -202,7 +221,7 @@ body::before {
 .home_about_social_email{
     display: flex;
     gap: 6px;
-    align-items: center;
+    align-items: center;    
 }
 
 .home_about_social_email textarea{
@@ -210,14 +229,18 @@ body::before {
     width: 60%;
     text-align: center;
     font-size: 1rem;
-    color: var(--main-text-color);
+    color: #1E3231;
     border: solid 1px var(--main-border-color);
     border-radius: 15px;
     resize: none;
 }
 
 .circle-btn{
-    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--terciary-btn-bg-color);    
     border: solid 1px var(--main-border-color);
     text-align: center;
@@ -297,6 +320,7 @@ hr{
     height: 75px;
     border: solid 1px var(--main-border-color);
     background-color: var(--secondary-bg-color);
+    color: var(--main-text-color);
     border-radius: 15px;
     gap: 5px;
 }
@@ -335,11 +359,12 @@ hr{
 .projects_container .section_title p {
     margin-top: 10px;
     margin-bottom: -8px;
+    color: var(--main-text-color);
 }
 
 .projects_select{
     padding: 3px 30px;
-    color: var(--main-text-color);
+    color: #1E3231;
     border: solid 1px var(--main-border-color);
     border-radius: 15px;
     box-shadow: 0 2px 3px #00000015;
@@ -367,6 +392,7 @@ hr{
     border-radius: 15px;
     box-shadow: 0 2px 3px #00000015;
     overflow: hidden;
+    color: var(--main-text-color);
 }
 
 .projects_card:hover{
@@ -448,6 +474,7 @@ hr{
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.06); 
     backdrop-filter: blur(5px); 
+    color: var(--main-text-color);
 	opacity:0;
 	transition: opacity 400ms ease-in-out;
 	pointer-events: none;
@@ -505,7 +532,7 @@ hr{
     margin-top: 15px;
     padding: 10px;
     background-color: var(--secondary-btn-bg-color);
-    color: var(--secondary-bg-color);
+    color: #E0E0E0;
     font-weight: 600;
     border-radius: 10px;
     box-shadow: 0 2px 3px #00000010;    
@@ -546,12 +573,13 @@ hr{
     border-inline-start: 1px solid var(--main-text-color);
     position: relative;
     margin: 20px 10px;
+    padding-bottom: 10px;
 }
 
 .item_time_line{
     list-style-type: none;
     padding-left: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 
 .decorativeCircleList{
@@ -566,6 +594,7 @@ hr{
 
 .item_time_line time{
     font-size: 0.9rem;
+    opacity: 0.6;
 }
 
 .item_time_line h3{
@@ -575,7 +604,18 @@ hr{
 
 .item_time_line p{
     max-width: 70%;
+    opacity: 0.8;
+}
 
+.item_institute {
+    margin-top: 5px;
+    letter-spacing: 0.08rem;
+    font-size: 1rem;
+}
+
+.item_description {
+    margin-top: 5px;
+    font-size: 0.8rem;
 }
 
 .contact_form_container{

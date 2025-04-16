@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             hideAllSections();
             targetSection.classList.remove('hidden'); 
+
+            document.querySelector('.sections_container').scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
 });

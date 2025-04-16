@@ -148,7 +148,7 @@
       "title": "Work Experience",
       "experience_1": {
         "start": "December 2024",
-        "end": "April 2025",
+        "end": "March 2025",
         "title": "Fullstack Developer Java/Angular",
         "enterprise": "Sofka",
         "description": "Collaborative project development implementing DDD, hexagonal / MVC architecture, and design patterns."
@@ -156,8 +156,8 @@
       "experience_2": {
         "start": "October 2024",
         "end": "December 2024",
-        "start_2": "April 2025",
-        "end_2": "May 2025",
+        "start_2": "March 2025",
+        "end_2": "April 2025",
         "title": "Virtual Reality Developer",
         "enterprise": "Prime Digital Consulting SA",
         "description": "Development and implementation of scripts in a project aimed at staff training using hand tracking."
