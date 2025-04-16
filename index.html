@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Autora: Karen Rincón, 2024, Portafolio.">
         <title>Karen Rincón</title>
-        <link href="style.css" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="Assets/Logo/Favicon.ico">
+        <link href="styles/style.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="assets/logo/Favicon.ico">
     </head>
     <body>
         <header class="header">
-            <div><img src="./Assets/Logo/Logo.png" loading="lazy" alt="logo"></div>
+            <div><img src="./assets/logo/Logo.png" loading="lazy" alt="logo"></div>
             <div class="config_container">
                 <div class="config">
                     <button id="btn-language" class="circle-btn" title="Language">ES</button>
@@ -21,15 +21,23 @@
         </header>
         <main class="main">
             <nav class="nav">                
-                <h1 class="nav_title">
-                    Portafolio
-                </h1>
+                <h1 class="nav_title" data-i18n="SIDENAV.title_nav"></h1>                    
                 <ul class="nav_list" id="nav_list">
-                    <li class="nav_list_option active"><a href="#home" title="Home"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                    <li class="nav_list_option"><a href="#skills" title="Skills"><i class="fa-solid fa-list"></i> Habilidades</a></li>
-                    <li class="nav_list_option"><a href="#projects" title="Projects"><i class="fa-solid fa-folder"></i> Proyectos</a></li>
-                    <li class="nav_list_option"><a href="#career-path" title="Career Path"><i class="fa-solid fa-signs-post"></i> Trayectoria</a></li>
-                    <li class="nav_list_option"><a href="#contact" title="Contact"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+                    <li class="nav_list_option active">
+                        <a href="#home" title="Home"><i class="fa-solid fa-house"></i> <span data-i18n="SIDENAV.home"></span></a>
+                    </li>
+                    <li class="nav_list_option">
+                        <a href="#skills" title="Skills"><i class="fa-solid fa-list"></i> <span data-i18n="SIDENAV.skills"></span></a>
+                    </li>
+                    <li class="nav_list_option">
+                        <a href="#projects" title="Projects"><i class="fa-solid fa-folder"></i> <span data-i18n="SIDENAV.projects"></span></a>
+                    </li>
+                    <li class="nav_list_option">
+                        <a href="#career-path" title="Career Path"><i class="fa-solid fa-signs-post"></i><span data-i18n="SIDENAV.career"></span></a>
+                    </li>
+                    <li class="nav_list_option">
+                        <a href="#contact" title="Contact"><i class="fa-solid fa-envelope"></i> <span data-i18n="SIDENAV.contact"></span></a>
+                    </li>
                 </ul>                                
             </nav>
 
@@ -37,14 +45,11 @@
                 <section id="home" class="home_container">
                     <div class="home_about">
                         <div class="home_about_title">                
-                            <h1>Karen Rincón </h1>
-                            <p>Ingeniera en Multimedia</p>
+                            <h1 data-i18n="HOME.title"></h1>
+                            <p data-i18n="HOME.description"></p>
                         </div>
                         <div class="home_about_text">
-                            <p>Me especializo en el <strong>Desarrollo Web</strong> y <strong>Desarrollo de software.</strong>
-                                Cuento con experencia en motores de desarrollo como Unity. Además,
-                                tengo una gran pasión por el CG Art. 
-                            </p>
+                            <p data-i18n="HOME.about"></p>
                         </div>
                         <div class="home_about_social">
                             <div class="home_about_social_media">
@@ -60,17 +65,17 @@
                         </div>                        
                     </div>
                     <div class="home_avatar">
-                        <img src="Assets/Icons/AvatarIcon.png" alt="Caricatura de Karen">
+                        <img src="assets/icons/AvatarIcon.png" alt="Caricatura de Karen">
                     </div>
                 </section>
                 <section id="skills" class="skills_container hidden">
                     <div class="section_title">
-                        <p>Acerca de mis</p>
-                        <h1>Habilidades</h1>
+                        <p data-i18n="SKILLS.subtitle"></p>
+                        <h1 data-i18n="SKILLS.title"></h1>
                     </div>
                     <div>
                         <div>
-                            <h2><i class="fa-solid fa-laptop-code"></i>Frontend</h2>
+                            <h2><i class="fa-solid fa-laptop-code"></i><span data-i18n="SKILLS.frontend"></span></h2>
                             <hr>
                             <div class="skills_container_section">
                                 <div class="skill_card">
@@ -98,10 +103,6 @@
                                     <p>Angular</p>
                                 </div>
                                 <div class="skill_card">
-                                    <i class="fa-brands fa-bootstrap"></i>
-                                    <p>Bootstrap</p>
-                                </div>
-                                <div class="skill_card">
                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">
                                         <defs>
                                             <linearGradient id="grad1" x1="0%" y1="100%" x2="0%" y2="0%">
@@ -116,7 +117,7 @@
                             </div>
                         </div>
                         <div>
-                            <h2><i class="fa-solid fa-database"></i>Backend</h2>
+                            <h2><i class="fa-solid fa-database"></i><span data-i18n="SKILLS.backend"></span></h2>
                             <hr>
                             <div class="skills_container_section">
                                 <div class="skill_card">
@@ -160,7 +161,7 @@
                             </div>
                         </div>
                         <div>
-                            <h2><i class="fa-solid fa-code"></i>Desarrollo de software </h2>
+                            <h2><i class="fa-solid fa-code"></i><span data-i18n="SKILLS.softwareDev"></span></h2>
                             <hr>
                             <div class="skills_container_section">
                                 <div class="skill_card">
@@ -194,242 +195,47 @@
                 <section id="projects" class="projects_container hidden">
                     <div>
                         <div class="section_title">
-                            <h1>Proyectos</h1>
-                            <p>Selecciona el área</p>
+                            <h1 data-i18n="PROJECTS.title"></h1>
+                            <p data-i18n="PROJECTS.selectArea"></p>
                         </div>
                         <div>
-                            <select name="area" id="area_selector" class="projects_select">
-                                <option value="1">Desarrollo</option>
-                                <option value="2">Diseño</option>
+                            <select name="area" id="area-selector" class="projects_select">
                             </select>
                         </div>
                     </div>
-                    <div class="projects_container_cards" id="projects_container_cards">
-                        <div id="projects_development" class="projects_cards_development cards_container">
-
-                            <div id="card-1" class="projects_card">
-                                <div class="projects_card_img">
-                                    <img src="Assets/Projects/Wirid-1.png" loading="lazy" alt="Captura de proyecto Wirid">
-                                </div>
-                                <div class="projects_card_info">
-                                    <h2>WiridLab Tour</h2>
-                                    <p>Recorrido virtual por un laboratorio con interacción en objetos 3D.</p> 
-                                    <div class="projects_card_labels_container">
-                                        <p class="projects_card_label">C#</p>
-                                        <p class="projects_card_label">Unity</p>
-                                        <p class="projects_card_label">Json</p>
-                                    </div>
-                                    <a href="#modal-card-1"><i class="fa-solid fa-plus"></i> Más info</a>
-                                </div>
-                            </div>
-                            <div id="modal-card-1" class="modal-card_container">
-                                <div class="modal-card">
-                                    <a href="#projects_container_cards" title="Close" class="close">X</a>
-                                    <h1>WiridLab Tour</h1>
-                                    <hr>
-                                    <div class="modal-info">
-                                        <p class="modal-card_container_text">Proyecto de seis meses que consistió en la creación de un recorrido virtual por un laboratorio de telecomunicaciones, con interacción en objetos 3D. Fui responsable de la codificación de la aplicación y de la dirección del equipo de desarrollo. El proyecto fue negociado directamente con el cliente y gestionado mediante la metodología Scrum, lo que permitió una entrega ágil y organizada a lo largo de todo el proceso.</p>
-                                        <p class="modal-card_container_text">Puedes probar el aplicativo presionando el botón rojo.</p>
-                                        <div class="projects_card_labels_container">
-                                            <p class="projects_card_label">C#</p>
-                                            <p class="projects_card_label">Unity</p>
-                                            <p class="projects_card_label">Json</p>
-                                            <p class="projects_card_label">WebGL</p>
-                                        </div>
-                                        <iframe frameborder="0" loading="lazy" src="https://itch.io/embed/2036400?border_width=0&amp;bg_color=e1e1e1&amp;fg_color=1E3231&amp;link_color=e53b44" width="50%" height="165"><a href="https://kjrm20.itch.io/wiridlab-tour">WiridLab Tour by Karen Rincón</a></iframe>
-                                    </div>
-                                </div>
-                            </div>                                                    
-
-                            <div id="card-2" class="projects_card">
-                                <div class="projects_card_img">
-                                    <img src="Assets/Projects/Encriptador.png" loading="lazy" alt="Captura de proyecto Encriptador">
-                                </div>
-                                <div class="projects_card_info">
-                                    <h2>Encriptador Web</h2>
-                                    <p>Página Web responsive, permite encriptar información basada en reglas.</p> 
-                                    <div class="projects_card_labels_container">
-                                        <p class="projects_card_label">HTML</p>
-                                        <p class="projects_card_label">CSS</p>
-                                        <p class="projects_card_label">JS</p>
-                                    </div>
-                                    <a href="#modal-card-2"><i class="fa-solid fa-plus"></i> Más info</a>
-                                </div>
-                            </div>
-                            <div id="modal-card-2" class="modal-card_container">
-                                <div class="modal-card">
-                                    <a href="#projects_container_cards" title="Close" class="close">X</a>
-                                    <h1>Encriptador Web</h1>
-                                    <hr>
-                                    <div class="modal-info">
-                                        <p class="modal-card_container_text">Proyecto de un mes, desarrollado como parte del primer challenge del Proyecto ONE de Oracle+Alura LATAM.
-                                            El reto consiste en crear una página web que permita a los usuarios encriptar y desencriptar texto de forma sencilla, demostrando la habilidad para construir una solución funcional y eficiente.</p>
-                                        <p class="modal-card_container_text">Puedes probar el aplicativo presionando el botón rojo.</p>
-                                        <div class="projects_card_labels_container">
-                                            <p class="projects_card_label">HTML</p>
-                                            <p class="projects_card_label">CSS</p>
-                                            <p class="projects_card_label">JS</p>
-                                        </div>
-                                        <a class="btn-rojo" href="https://kjrm20.github.io/Encriptador-Challenge/" target="_new">Entrar al sitio web</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="card-3" class="projects_card">
-                                <div class="projects_card_img">
-                                    <img src="Assets/Projects/Piano II.png" loading="lazy" alt="Captura de proyecto Encriptador">
-                                </div>
-                                <div class="projects_card_info">
-                                    <h2>Piano Pin</h2>
-                                    <p>Propuesta para autentificación de usuarios en plataformas RV.</p> 
-                                    <div class="projects_card_labels_container">
-                                        <p class="projects_card_label">C#</p>
-                                        <p class="projects_card_label">Unity</p>
-                                        <p class="projects_card_label">Leap Motion</p>
-                                    </div>
-                                    <a href="#modal-card-3"><i class="fa-solid fa-plus"></i> Más info</a>
-                                </div>
-                            </div>
-                            <div id="modal-card-3" class="modal-card_container">
-                                <div class="modal-card">
-                                    <a href="#projects_container_cards" title="Close" class="close">X</a>
-                                    <h1>Piano Pin</h1>
-                                    <hr>
-                                    <div class="modal-info">
-                                        <p class="modal-card_container_text">Proyecto de un mes, desarrollado como propuesta de solución a la autentificación de usuarios en plataformas inmersivas como lo es la Realidad Virtual.
-                                            Piano Pin, tiene como propósito la creación de melodías que el usuario emplea para autentificarse. Fui la encargada de la codificación, donde tuve en cuenta
-                                            La duración y el tiempo en que iniciaba cada nota, junto con un rango válido de desfase. 
-                                            En esta aplicación se requiere el uso de Leap Motion.
-                                        </p>
-                                        <iframe width="50%" height="50%" src="https://www.youtube.com/embed/XHKBeCiEQaE?si=5PKs2dUs_j2ueXH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <p class="modal-card_container_text">Puedes probar el aplicativo presionando el botón rojo.</p>
-                                        <div class="projects_card_labels_container">
-                                            <p class="projects_card_label">C#</p>
-                                            <p class="projects_card_label">Unity</p>
-                                            <p class="projects_card_label">Leap Motion</p>
-                                        </div>
-                                        <a class="btn-rojo" href="Assets/Projects/Ejecutable - Piano Pin.zip" download="Assets/Projects/Ejecutable - Piano Pin.zip">Descargar Ejecutable</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="projects_design" class="projects_cards_design cards_container hidden">
-                            
-                           Nada por aquí 👀, vuelve a intentarlo más tarde.
-
-                        </div>
+                    <div class="projects_container_cards" id="projects_container_cards">                                                    
+                        <div class="projects_cards_development cards_container" id="project-cards"></div>
                     </div>
                 </section>
                 <section id="career-path" class="career-path_container hidden">
                     <div class="section_title">
-                        <h1>Trayectoria</h1>
+                        <h1 data-i18n="CAREER.title"></h1>
                     </div>
-                    <div id="experience-container">
-                        <h2><i class="fa-solid fa-briefcase"></i> Experiencia Laboral</h2>
-                        <hr>
-                        <ol class="time_line">
-                            <li class="item_time_line">
-                                <div>
-                                    <div class="decorativeCircleList"></div>
-                                    <time datetime="2023-11">Noviembre 2023</time> - <time datetime="2024-05">Mayo 2024</time>
-                                    <h3>Practicante TI</h3>
-                                    <p>Brinsa SA</p>
-                                    <p>
-                                        Desarrollo de experiencia en RA mediante 8thWall.                           
-                                        Desarrollo de maquetaciones HTML y CSS.                                
-                                        Creación de tableros de visualización con Looker Studio.
-                                        Creación de contenido multimedia para capacitación de personal.
-                                    </p>
-                                </div>
-                            </li>
-                        </ol>                            
+                    <div id="experience-container">                            
                     </div>
-                    <div id="education-container">
-                        <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
-                        <hr>
-                        <ol class="time_line">
-                            <li id="edu-item-1" class="item_time_line">
-                                <div>
-                                    <div class="decorativeCircleList"></div>
-                                    <time datetime="2024-09">Septiembre 2024</time>
-                                    <h3>Universidad Militar Nueva Granada</h3>
-                                    <p>Ingeniería en Multimedia</p>
-                                    <p>
-                                        Mérito académico: Cum Laude
-                                    </p>
-                                </div>
-                            </li>
-                            <li id="edu-item-2" class="item_time_line">
-                                <div>
-                                    <div class="decorativeCircleList"></div>
-                                    <time datetime="2018-12">Diciembre 2018</time>
-                                    <h3>Instituto Técnico Industrial</h3>
-                                    <p>Bachiller, Especialidad Electricidad y Electrónica</p>
-                                    <p>
-                                        Técnico en Bajas Tensiones
-                                    </p>
-                                </div>
-                            </li>
-                        </ol>         
+                    <div id="education-container">                    
                     </div>
-                    <div id="courses-container">
-                        <h2><i class="fa-solid fa-book"></i> Otros Cursos</h2>
-                        <hr>
-                        <ol class="time_line">
-                            <li id="courses-item-1" class="item_time_line">
-                                <div>
-                                    <div class="decorativeCircleList"></div>
-                                    <time datetime="2024-09">Septiembre 2024</time>
-                                    <h3>Curso de Desarrollo web</h3>
-                                    <p>Udemy</p>
-                                    <p>
-                                        Temas: HTML, CSS, JS, Angular, Typescript
-                                    </p>
-                                </div>
-                            </li>
-                            <li id="courses-item-2" class="item_time_line">
-                                <div>
-                                    <div class="decorativeCircleList"></div>
-                                    <time datetime="2018-12">En curso</time>
-                                    <h3>Bootcamp Inteligencia Artificial</h3>
-                                    <p>TalentoTech</p>
-                                    <p>
-                                        Temas: Python, Numpy, Pandas, Búsquedas informadas y no informadas, Análisis de datos
-                                    </p>
-                                </div>
-                            </li>
-                            <li id="courses-item-3" class="item_time_line">
-                                <div>
-                                    <div class="decorativeCircleList"></div>
-                                    <time datetime="2018-12">En curso</time>
-                                    <h3>Certificación ONE - Oracle Next Education</h3>
-                                    <p>Oracle/Alura Latam</p>
-                                    <p>
-                                        Temas: HTML, CSS, JS, Java, Spring Boot
-                                    </p>
-                                </div>
-                            </li>
-                        </ol>         
+                    <div id="courses-container">                        
                     </div>
                 </section>
                 <section id="contact" class="contact_container hidden">
                     <div>
                         <div class="section_title">
-                            <h1>¡Envíame un mensaje!</h1>
-                            <p>Si tienes alguna pregunta o propuesta, o simplemente quieres decir hola.</p>
+                            <h1 data-i18n="CONTACT.title"></h1>
+                            <p data-i18n="CONTACT.description"></p>
                         </div>
                     </div>
                     <div class="contact_form_container">
                         <form id="form-contact" class="form" action="https://formspree.io/f/xnqernvr" method="POST">
                             <div class="form-questions-container">
-                                <input class="input-form" name="name" type="text" placeholder="Your name" maxlength="50" required>
-                                <input class="input-form" name="email" type="email" placeholder="Your email address" required>
-                                <textarea class="text-form" name="message" rows="5" placeholder="Your message"></textarea>
+                                <input class="input-form" name="name" type="text" data-i18n-placeholder="CONTACT.form.namePlaceholder" maxlength="50" required>
+                                <input class="input-form" name="email" type="email" data-i18n-placeholder="CONTACT.form.emailPlaceholder" required>
+                                <textarea class="text-form" name="message" rows="5" data-i18n-placeholder="CONTACT.form.messagePlaceholder"></textarea>
                             </div>
-                                <button type="submit" class="btn-submit">¡Enviar!</button>
+                                <button type="submit" class="btn-submit" data-i18n="CONTACT.form.submit"></button>
                         </form>
                         <div class="contact_form_img">
-                            <img src="Assets/Icons/GatitoIcon.png" loading="lazy" alt="Gatito observando el formulario">
+                            <img src="assets/icons/GatitoIcon.png" loading="lazy" alt="Gatito observando el formulario">
                         </div>
                     </div>
                 </section>
@@ -440,8 +246,14 @@
             </div>
         </main>
         
-
         <script src="https://kit.fontawesome.com/83090b1ff8.js" crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+        <script src="scripts/renderCards.js"></script>
+        <script src="scripts/renderAreaSelector.js"></script>
+        <script src="scripts/renderCareerSection.js"></script>
+        <script src="scripts/i18n.js"></script>
+        <script src="scripts/sectionSwitcher.js"></script>
+        <script src="scripts/menuToggle.js"></script>
+        <script src="scripts/copyToClipboard.js"></script>
+        <script src="scripts/sendForm.js"></script>
     </body>
 </html>

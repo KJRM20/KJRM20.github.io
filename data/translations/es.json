@@ -1,0 +1,199 @@
+{
+  "SIDENAV": {
+    "title_nav": "Portafolio",
+    "home": "Inicio",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "career": "Trayectoria",
+    "contact": "Contacto"
+  },
+  "HOME": {
+    "title": "Karen Rincón",
+    "description": "Ingeniera en Multimedia",
+    "about": "Me especializo en el <strong>Desarrollo Web</strong> y el <strong>Desarrollo de Software</strong>. Manejo arquitecturas como <strong>DDD</strong>, <strong>hexagonal</strong> y <strong>MVC</strong>, y tengo conocimientos en <strong>patrones de </strong> como Singleton, Observer, Factory, entre otros.<br><br> Cuento con experiencia en motores de desarrollo como <strong>Unity</strong>, creando interacciones en <strong>Realidad Virtual</strong> (RV) y <strong>Realidad Aumentada</strong> (RA). Además, tengo una gran pasión por el arte CG (Computer Graphics).",
+    "mail": "Enviar correo",
+    "copyBtn": "Copiar correo"
+  },
+  "SKILLS": {
+    "title": "Habilidades",
+    "subtitle": "Acerca de mis",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "softwareDev": "Desarrollo de software"
+  },
+  "PROJECTS": {
+    "title": "Proyectos",
+    "selectArea": "Selecciona el área",
+    "areas": {
+      "frontend": {
+        "title": "Frontend",
+        "cards": {
+          "card_btn": "Ver más",
+          "modal_btn": "Ver demo",
+          "callaction": "¿Quieres saber más? Revisa los enlaces a continuación.",
+          "card_1": {
+            "image": "Portafolio",
+            "title": "Portafolio Personal",
+            "shortDescription": "Una página web responsive para mostrar mis proyectos.",
+            "description": "Este portafolio fue desarrollado con HTML, CSS y JavaScript puro. Tiene secciones como habilidades, proyectos y contacto.",
+            "labels": ["HTML", "CSS", "JS", "Responsive"],
+            "demo": "https://kjrm20.github.io/",
+            "repo": "https://github.com/KJRM20/KJRM20.github.io"
+          },
+          "card_2": {
+            "image": "EncriptadorWeb",
+            "title": "Encriptador Web",            
+            "shortDescription": "Página Web responsive, permite encriptar información basada en reglas.",
+            "description": "Proyecto de una semana, desarrollado como parte del primer challenge del Proyecto ONE de Oracle+Alura LATAM. El reto consiste en crear una página web que permita a los usuarios encriptar y desencriptar texto de forma sencilla, demostrando la habilidad para construir una solución funcional y eficiente.",
+            "labels": ["HTML", "CSS", "JS", "Responsive", "A11y"],
+            "demo": "https://kjrm20.github.io/Encriptador-Challenge/",
+            "repo": "https://github.com/KJRM20/Encriptador-Challenge"
+          },
+          "card_3": {
+            "image": "Gamma",
+            "title": "Gamma en Angular",
+            "shortDescription": "Reconstrucción, basada en semántica, de página web con Angular 19.",
+            "description": "Proyecto de una semana, desarrollado para la práctica de Angular. El reto consistió en recrear una página web para desktop con componentes que sigan la metodología BEM para implementación adecuada de estilos con SASS.",
+            "labels": ["HTML", "SASS", "TS", "Angular", "BEM", "A11y"],
+            "repo": "https://github.com/KJRM20/Gamma-page/tree/develop"
+          }
+        }
+      },
+      "backend": {
+        "title": "Backend",
+        "cards": {
+          "card_btn": "Ver más",
+          "modal_btn": "Ver demo",
+          "callaction": "¿Quieres saber más? Revisa los enlaces a continuación.",
+          "card_1": {
+            "image": "uno",
+            "title": "Scoreboard UNO",
+            "shortDescription": "API REST del sistema de puntaje del juego UNO",
+            "description": "Este proyecto fue desarrollado con Java. En base al diseño de Bounded Context, la arquitectura DDD, y la programación basada en eventos (Event Sourcing) se implementó el sistema de puntaje que maneja el juego de UNO, teniendo en cuenta las reglas, tipos de cartas y turnos.",
+            "labels": [
+              "Java",
+              "DDD",
+              "MongoDB",
+              "Event Sourcing",
+              "Bounded Context"
+            ],
+            "repo": "https://github.com/KJRM20/API-UNO/tree/develop"
+          },
+          "card_2": {
+            "image": "Chefly",
+            "title": "Chefly",
+            "shortDescription": "API REST para el manejo de operaciones de un restaurante.",
+            "description": "Esta API REST fue desarrollada con Java y SpringBoot conectado a una base de datos MySQL. En base a la arquitectura MVC, y los patrones de diseño Observer, Chain of Responsibility, State y Singleton.",
+            "labels": ["Java", "SpringBoot", "MySQL"],
+            "repo": "https://github.com/KJRM20/07-api-rest/tree/develop"
+          },
+          "card_3": {
+            "image": "Airsofka",
+            "title": "Login AirSofka",
+            "shortDescription": "API REST para el login de página de vuelos.",
+            "description": "Este proyecto colaborativo fue desarrollado en Java. Basado en el diseño de Bounded Context, la arquitectura DDD y la programación orientada a eventos (Event Sourcing), se implementó el sistema de login de una página de vuelos, que permite el ingreso de usuarios de forma local o a través de Google. Este backend está diseñado para contar con un único superusuario (admin). Además, al momento del ingreso del usuario, se genera un token que se almacena como cookie en el frontend de la página. Se emplearon adaptadores y puertos para guardar la información tanto en una base de datos MySQL como en una base de datos en MongoDB Atlas.",
+            "labels": [
+              "Java",
+              "JWT",
+              "Google OAuth",
+              "DDD",
+              "Event Sourcing",
+              "MongoDB",
+              "MySQL"
+            ],
+            "repo": "https://github.com/KJRM20/Back-AirSofka"
+          }
+        }
+      },
+      "unity": {
+        "title": "Unity",
+        "cards": {
+          "card_btn": "Ver más",
+          "modal_btn": "Ver demo",
+          "callaction": "¿Quieres saber más? Revisa los enlaces a continuación.",
+          "card_1": {
+            "image": "WiridLAB",
+            "title": "WiridLAB",
+            "shortDescription": "Recorrido virtual 360° de laboratorio con interacción de objetos.",
+            "description": "Proyecto de seis meses que consistió en la creación de un recorrido virtual por un laboratorio de telecomunicaciones, con interacción en objetos 3D. Fui responsable de la codificación de la aplicación y de la dirección del equipo de desarrollo. El proyecto fue negociado directamente con el cliente y gestionado mediante la metodología Scrum, lo que permitió una entrega ágil y organizada a lo largo de todo el proceso.",
+            "labels": ["Unity", "C#", "JSON", "WebGL"],
+            "demo": "https://kjrm20.itch.io/wiridlab-tour"
+          },
+          "card_2": {
+            "image": "PianoPin",
+            "title": "PianoPin",
+            "shortDescription": "Propuesta para autentificación de usuarios en plataformas RV.",
+            "description": "Proyecto de un mes, desarrollado como propuesta de solución a la autentificación de usuarios en plataformas inmersivas como lo es la Realidad Virtual. Piano Pin, tiene como propósito la creación de melodías que el usuario emplea para autentificarse. Fui la encargada de la codificación, donde tuve en cuenta La duración y el tiempo en que iniciaba cada nota, junto con un rango válido de desfase. En esta aplicación se requiere el uso de Leap Motion.",
+            "labels": ["Unity", "C#", "Leap Motion"],
+            "path": "assets/projects/Ejecutable - PianoPin.zip"
+          }
+        }
+      }
+    }
+  },
+  "CAREER": {
+    "title": "Trayectoria",
+    "experiences": {
+      "title": "  Experiencia Laboral",
+      "experience_1": {
+        "start": "Diciembre 2024",
+        "end": "Abril 2025",
+        "title": "Desarrolladora Fullstack Java/Angular",
+        "enterprise": "Sofka",
+        "description": "Desarrollo de proyectos colaborativos implementando DDD, arquitectura hexagonal / MVC y patrones de diseño."
+      },
+      "experience_2": {
+        "start": "Octubre 2024",
+        "end": "Diciembre 2024",
+        "start_2": "Abril 2025",
+        "end_2": "Mayo 2025",
+        "title": "Desarrolladora de Realidad Virtual",
+        "enterprise": "Prime Digital Consulting SA",
+        "description": "Desarrollo e implementación de scripts en proyecto destinado a la capacitación de personal empleando hand tracking."
+      },
+      "experience_3": {
+        "start": "Noviembre 2023",
+        "end": "Mayo 2024",
+        "title": "Practicante TI",
+        "enterprise": "Brinsa SA",
+        "description": "Desarrollo de experiencia en RA mediante 8thWall. Desarrollo de maquetaciones HTML y CSS. Creación de tableros de visualización con Looker Studio. Creación de contenido multimedia para capacitación de personal."
+      }
+    },
+    "education": "  Educación",
+    "education_1": {
+      "time": "Septiembre 2024",
+      "level": "Ingeniería en Multimedia",
+      "institute": "Universidad Militar Nueva Granada",
+      "description": "Mérito académico: Cum Laude."
+    },
+    "education_2": {
+      "time": "Diciembre 2018",
+      "level": "Bachiller, Especialidad Electricidad y Electrónica",
+      "institute": "Instituto Técnico industrial",
+      "description": "Especialidad electricidad y electrónica. Técnico en Bajas Tensiones."
+    },
+    "otherCourses": "  Otros Cursos",
+    "course_1": {
+      "time": "Septiembre 2024",
+      "title": "Curso de Desarrollo web",
+      "institute": "Udemy",
+      "description": "Temas: HTML, CSS, JS, Angular, Typescript."
+    },
+    "course_2": {
+      "time": "Noviembre 2024",
+      "title": "Curso de Inteligencia Artificial",
+      "institute": "MINTIC - Programa TalentoTech",
+      "description": "Temas: Python, Numpy, Pandas, Búsquedas informadas y no informadas, Análisis de datos."
+    }
+  },
+  "CONTACT": {
+    "title": "¡Envíame un mensaje!",
+    "description": "Si tienes alguna pregunta o propuesta, o simplemente quieres decir hola.",
+    "form": {
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "Tu correo electrónico",
+      "messagePlaceholder": "Tu mensaje",
+      "submit": "¡Enviar!"
+    }
+  }
+}

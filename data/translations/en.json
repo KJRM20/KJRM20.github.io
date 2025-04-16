@@ -1,0 +1,199 @@
+{
+  "SIDENAV": {
+    "title_nav": "Portfolio",
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "career": "Career",
+    "contact": "Contact"
+  },
+  "HOME": {
+    "title": "Karen Rincón",
+    "description": "Multimedia Engineer",
+    "about": "I specialize in <strong>Web Development</strong> and <strong>Software Development</strong>. I work with architectures such as <strong>DDD</strong>, <strong>Hexagonal</strong>, and <strong>MVC</strong>, and have knowledge of <strong>design patterns</strong> such as Singleton, Observer, Factory, among others.<br><br> I have experience with development engines like <strong>Unity</strong>, creating interactions in <strong>Virtual Reality</strong> (VR) and <strong>Augmented Reality</strong> (AR). Additionally, I have a great passion for <strong>CG Art</strong> (Computer Graphics).",
+    "mail": "Send Email",
+    "copyBtn": "Copy Email"
+  },
+  "SKILLS": {
+    "title": "Skills",
+    "subtitle": "About my",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "softwareDev": "Software Development"
+  },
+  "PROJECTS": {
+    "title": "Projects",
+    "selectArea": "Select area",
+    "areas": {
+      "frontend": {
+        "title": "Frontend",        
+        "cards": {
+          "card_btn": "View more",
+          "modal_btn": "View demo",
+          "callaction": "Want to know more? Check out the links below.",
+          "card_1": {
+            "image": "Portafolio",
+            "title": "Personal Portfolio",
+            "shortDescription": "A responsive website to showcase my projects.",
+            "description": "This portfolio was developed using HTML, CSS, and vanilla JavaScript. It includes sections like skills, projects, and contact.",
+            "labels": ["HTML", "CSS", "JS", "Responsive"],
+            "demo": "https://kjrm20.github.io/",
+            "repo": "https://github.com/KJRM20/KJRM20.github.io"
+          },
+          "card_2": {
+            "image": "EncriptadorWeb",
+            "title": "Web Encryptor",
+            "shortDescription": "Responsive website that encrypts information based on rules.",
+            "description": "One-week project developed as part of the first challenge of the ONE Project by Oracle+Alura LATAM. The challenge was to create a web page that allows users to easily encrypt and decrypt text, showcasing the ability to build a functional and efficient solution.",
+            "labels": ["HTML", "CSS", "JS", "Responsive", "A11y"],
+            "demo": "https://kjrm20.github.io/Encriptador-Challenge/",
+            "repo": "https://github.com/KJRM20/Encriptador-Challenge"
+          },
+          "card_3": {            
+            "image": "Gamma",
+            "title": "Gamma in Angular",
+            "shortDescription": "Reconstruction of a semantic-based website using Angular 19.",
+            "description": "One-week project developed to practice Angular. The challenge was to recreate a desktop website with components following the BEM methodology for proper SASS style implementation.",
+            "labels": ["HTML", "SASS", "TS", "Angular", "BEM", "A11y"],
+            "repo": "https://github.com/KJRM20/Gamma-page/tree/develop"
+          }
+        }
+      },
+      "backend": {
+        "title": "Backend",
+        "cards": {
+          "card_btn": "View more",
+          "modal_btn": "View demo",
+          "callaction": "Want to know more? Check out the links below.",
+          "card_1": {
+            "image": "uno",
+            "title": "UNO Scoreboard",
+            "shortDescription": "REST API for the UNO game scoring system.",
+            "description": "This project was developed in Java. Based on Bounded Context design, DDD architecture, and Event Sourcing programming, it implements a scoring system for the UNO game, considering rules, card types, and turns.",
+            "labels": [
+              "Java",
+              "DDD",
+              "MongoDB",
+              "Event Sourcing",
+              "Bounded Context"
+            ],
+            "repo": "https://github.com/KJRM20/API-UNO/tree/develop"
+          },
+          "card_2": {
+            "image": "Chefly",
+            "title": "Chefly",
+            "shortDescription": "REST API for restaurant operations management.",
+            "description": "This REST API was developed in Java using SpringBoot and connected to a MySQL database. It is based on the MVC architecture and design patterns such as Observer, Chain of Responsibility, State, and Singleton.",
+            "labels": ["Java", "SpringBoot", "MySQL"],
+            "repo": "https://github.com/KJRM20/07-api-rest/tree/develop"
+          },
+          "card_3": {
+            "image": "Airsofka",
+            "title": "AirSofka Login",
+            "shortDescription": "REST API for flight page login system.",
+            "description": "This collaborative project was developed in Java. Based on Bounded Context design, DDD architecture, and event-driven programming (Event Sourcing), it implements a login system for a flight booking page that allows user authentication locally or via Google. The backend is designed for a single superuser (admin). Upon user login, a token is generated and stored as a cookie on the frontend. Adapters and ports were used to store information in both a MySQL database and MongoDB Atlas.",
+            "labels": [
+              "Java",
+              "JWT",
+              "Google OAuth",
+              "DDD",
+              "Event Sourcing",
+              "MongoDB",
+              "MySQL"
+            ],
+            "repo": "https://github.com/KJRM20/Back-AirSofka"
+          }
+        }
+      },
+      "unity": {
+        "title": "Unity",
+        "cards": {
+          "card_btn": "View more",
+          "modal_btn": "View demo",
+          "callaction": "Want to know more? Check out the links below.",
+          "card_1": {
+            "image": "WiridLAB",
+            "title": "WiridLAB",
+            "shortDescription": "360° virtual tour of a lab with object interaction.",
+            "description": "Six-month project involving the creation of a virtual tour of a telecommunications lab with 3D object interaction. I was responsible for coding the application and leading the development team. The project was negotiated directly with the client and managed using the Scrum methodology, ensuring an agile and organized delivery throughout the process.",
+            "labels": ["Unity", "C#", "JSON", "WebGL"],
+            "demo": "https://kjrm20.itch.io/wiridlab-tour"
+          },
+          "card_2": {
+            "image": "PianoPin",
+            "title": "PianoPin",
+            "shortDescription": "Authentication proposal for users on VR platforms.",
+            "description": "One-month project developed as a proposed solution for user authentication on immersive platforms like Virtual Reality. PianoPin aims to authenticate users through melody creation. I was in charge of the coding, considering note duration, start time, and an acceptable timing offset range. This application requires Leap Motion.",
+            "labels": ["Unity", "C#", "Leap Motion"],
+            "path": "assets/projects/Ejecutable - PianoPin.zip"
+          }
+        }
+      }
+    }
+  },
+  "CAREER": {
+    "title": "Career",
+    "experiences": {
+      "title": "Work Experience",
+      "experience_1": {
+        "start": "December 2024",
+        "end": "April 2025",
+        "title": "Fullstack Developer Java/Angular",
+        "enterprise": "Sofka",
+        "description": "Collaborative project development implementing DDD, hexagonal / MVC architecture, and design patterns."
+      },
+      "experience_2": {
+        "start": "October 2024",
+        "end": "December 2024",
+        "start_2": "April 2025",
+        "end_2": "May 2025",
+        "title": "Virtual Reality Developer",
+        "enterprise": "Prime Digital Consulting SA",
+        "description": "Development and implementation of scripts in a project aimed at staff training using hand tracking."
+      },
+      "experience_3": {
+        "start": "November 2023",
+        "end": "May 2024",
+        "title": "IT Intern",
+        "enterprise": "Brinsa SA",
+        "description": "Augmented Reality experience development using 8thWall. HTML and CSS prototyping. Creation of data visualization dashboards with Looker Studio. Development of multimedia content for staff training."
+      }
+    },
+    "education": "Education",
+    "education_1": {
+      "time": "September 2024",
+      "level": "Bachelor’s in Multimedia Engineering",
+      "institute": "Universidad Militar Nueva Granada",
+      "description": "Academic Merit: Cum Laude."
+    },
+    "education_2": {
+      "time": "December 2018",
+      "level": "High School Diploma, Specialization in Electricity and Electronics",
+      "institute": "Instituto Técnico Industrial",
+      "description": "Specialization in electricity and electronics. Technician in Low Voltage Systems."
+    },
+    "otherCourses": "Other Courses",
+    "course_1": {
+      "time": "September 2024",
+      "title": "Web Development Course",
+      "institute": "Udemy",
+      "description": "Topics: HTML, CSS, JS, Angular, Typescript."
+    },
+    "course_2": {
+      "time": "November 2024",
+      "title": "Artificial Intelligence Course",
+      "institute": "MINTIC - TalentoTech Program",
+      "description": "Topics: Python, Numpy, Pandas, Informed and Uninformed Search, Data Analysis."
+    }
+  },
+  "CONTACT": {
+    "title": "Send me a message!",
+    "description": "If you have any questions or proposals, or just want to say hello.",
+    "form": {
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email",
+      "messagePlaceholder": "Your message",
+      "submit": "Send!"
+    }
+  }
+}
