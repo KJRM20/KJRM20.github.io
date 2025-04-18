@@ -100,7 +100,7 @@
             "image": "Airsofka",
             "title": "Login AirSofka",
             "shortDescription": "API REST para el login de página de vuelos.",
-            "description": "Este proyecto colaborativo fue desarrollado en Java. Basado en el diseño de Bounded Context, la arquitectura DDD y la programación orientada a eventos (Event Sourcing), se implementó el sistema de login de una página de vuelos, que permite el ingreso de usuarios de forma local o a través de Google. Este backend está diseñado para contar con un único superusuario (admin). Además, al momento del ingreso del usuario, se genera un token que se almacena como cookie en el frontend de la página. Se emplearon adaptadores y puertos para guardar la información tanto en una base de datos MySQL como en una base de datos en MongoDB Atlas.",
+            "description": "Este proyecto colaborativo fue desarrollado en Java. Basado en el diseño de Bounded Context, la arquitectura DDD y la programación orientada a eventos (Event Sourcing), se implementó el sistema de login de una página de vuelos, que permite el ingreso de usuarios de forma local o a través de Google.<br><br>Este backend está diseñado para contar con un único superusuario (admin). Además, al momento del ingreso del usuario, se genera un token que se almacena como cookie en el frontend de la página. Se emplearon adaptadores y puertos para guardar la información tanto en una base de datos MySQL como en una base de datos en MongoDB Atlas.",
             "labels": [
               "Java",
               "JWT",

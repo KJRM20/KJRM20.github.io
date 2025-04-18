@@ -59,7 +59,7 @@ function renderProjectsCards(translations, selectedArea) {
               <h1>${card.title}</h1>
               <hr>
               <div class="modal-info">
-                <p class="modal-card_container_text">${card.description}</p>
+                <div class="modal-card_container_text">${card.description}</div>
                 <p class="modal-card_container_text">${area.cards.callaction}</p>
                 <div class="projects_card_labels_container">
                   ${allLabelsHTML}

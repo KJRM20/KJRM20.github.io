@@ -370,6 +370,10 @@ hr{
     box-shadow: 0 2px 3px #00000015;
 }
 
+.projects_container_text {
+    max-width: 80%;
+}
+
 .projects_container_cards{
     display: flex;
     padding: 14px 0 4px 0;
@@ -433,12 +437,17 @@ hr{
 .projects_card_info p{
     font-size: 12px;
     text-align: center;
+    text-wrap: pretty;
     margin: 5px 0 3px;
 }
 
 .projects_card_labels_container{
     display: flex;
-    gap: 2px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    max-width: 80%;
+    gap: 5px;
 }
 
 .projects_card_info .projects_card_label{
@@ -517,11 +526,12 @@ hr{
 .modal-card_container_text{
     width: 85%;
     text-align: justify;
+    text-wrap: pretty;
+    hyphens: auto;
 }
 
 .modal-card_container .projects_card_label{
     background-color: var(--main-label-bg-color);
-    margin: 10px 0;
     padding: 5px 10px;
     font-size: 0.8rem;
     font-weight: 600;
